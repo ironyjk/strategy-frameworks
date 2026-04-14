@@ -77,6 +77,44 @@ cp -r wardley porter /path/to/your/project/.claude/skills/
 
 Note: `/think` requires all 30 tools to be installed for full auto-routing.
 
+### Other Platforms
+
+These frameworks work with any LLM, not just Claude Code. The SKILL.md and references/ files are standard markdown.
+
+**Cursor**
+```bash
+# Copy framework content into .cursorrules or .cursor/rules/
+cat wardley/SKILL.md >> .cursorrules
+# Or use as project-level rules
+cp -r wardley/ .cursor/rules/
+```
+
+**ChatGPT (Custom GPTs)**
+1. Create a new GPT at chat.openai.com/gpts
+2. Upload SKILL.md + references/*.md as Knowledge files
+3. Set instructions: "You are a strategy consultant. Use the uploaded frameworks to analyze problems."
+4. For /think behavior: upload think/SKILL.md as the main instruction
+
+**Gemini**
+- Paste SKILL.md content into System Instructions
+- Or use Google AI Studio → System Prompt
+
+**Open Source LLMs (Llama, Hermes, etc.)**
+```python
+# Load as system prompt
+with open("wardley/SKILL.md") as f:
+    system_prompt = f.read()
+# Pass to your LLM inference
+```
+
+**Windsurf / Cline / Aider**
+- Copy SKILL.md content to the tool's system prompt or rules file
+- Most coding agents support markdown instructions natively
+
+**As Human Reference**
+- The `references/` documents are standalone guides — no AI needed
+- Print them, use in workshops, or share with your team
+
 ## Usage
 
 ```

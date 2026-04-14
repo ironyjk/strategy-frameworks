@@ -105,6 +105,38 @@ cp -r wardley porter .claude/skills/
 
 > `/think`는 30개 도구가 모두 설치되어야 자동 라우팅이 완전히 작동합니다.
 
+### 다른 플랫폼에서 사용
+
+이 프레임워크는 Claude Code 전용이 아닙니다. SKILL.md와 references/ 파일은 표준 마크다운이므로 어떤 LLM에서든 사용할 수 있습니다.
+
+**Cursor**
+```bash
+# .cursorrules 또는 .cursor/rules/에 복사
+cat wardley/SKILL.md >> .cursorrules
+```
+
+**ChatGPT (Custom GPT)**
+1. chat.openai.com/gpts에서 새 GPT 생성
+2. SKILL.md + references/*.md를 Knowledge 파일로 업로드
+3. Instructions에 "전략 컨설턴트로서 업로드된 프레임워크를 사용해 문제를 분석하세요" 입력
+
+**Gemini**
+- System Instructions에 SKILL.md 내용 붙여넣기
+
+**오픈소스 LLM (Llama, Hermes 등)**
+```python
+with open("wardley/SKILL.md") as f:
+    system_prompt = f.read()
+# LLM 추론 시 system prompt로 전달
+```
+
+**Windsurf / Cline / Aider**
+- 각 도구의 시스템 프롬프트나 규칙 파일에 SKILL.md 내용 복사
+
+**사람이 직접 참고**
+- `references/` 문서는 AI 없이도 독립적으로 사용 가능한 가이드
+- 인쇄해서 워크숍이나 팀 교육에 활용 가능
+
 ## 사용법
 
 ### 기본 사용
