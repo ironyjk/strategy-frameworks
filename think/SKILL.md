@@ -1,5 +1,6 @@
 ---
 name: think
+version: "1.1.0"
 description: "Strategic Thinking Agent — automatically selects the best framework(s) from 29 tools (TOC/TRIZ/Wardley/OODA/Systems Thinking/Blue Ocean/Design Thinking/First Principles/Porter/Drucker/BSC) to solve any business problem. Just describe your problem."
 tools: ["Read", "Write", "Edit", "Agent", "Skill"]
 install: |
@@ -140,6 +141,62 @@ Recommended Actions:
 - `/think` — Full auto-routing: classify → select → execute → synthesize
 - `/think:select` — Just classify the problem and recommend which tools to use (don't execute)
 - `/think:compare` — Apply 2-3 different frameworks to the same problem and compare their answers
+
+## Industry-Specific Routing
+
+| Industry | Primary Frameworks | Why |
+|----------|-------------------|-----|
+| Manufacturing | TOC, DBR, TRIZ | Physical constraints, technical contradictions |
+| Service | Design Thinking, Drucker, BSC | Customer experience, effectiveness |
+| IT/Software | Wardley, First Principles, OODA | Evolution, technical debt, speed |
+| Construction | TOC:CCPM, Porter, BSC | Project scheduling, competitive bidding |
+| Retail/Consumer | Blue Ocean, Design Thinking, Porter | Market creation, customer insight |
+| Healthcare | Systems Thinking, TOC, Design Thinking | Complex systems, patient flow, empathy |
+| Energy/Utilities | Porter, TOC:Throughput, Wardley | Regulated markets, asset optimization, evolution |
+| Finance | Systems Thinking, OODA, Porter | Feedback loops, speed, competitive dynamics |
+
+## Conflict Resolution Between Frameworks
+
+When 2+ frameworks give contradictory recommendations:
+
+1. **Data wins**: Framework backed by concrete data > framework based on analogy
+2. **Constraint wins**: TOC insight about THE constraint overrides general strategy advice
+3. **Customer wins**: Design Thinking/Drucker 5Q customer insight overrides internal optimization
+4. **Time horizon**: Short-term crisis -> OODA wins; Long-term strategy -> Wardley/Porter wins
+5. **Reversibility**: If recommendations conflict, prefer the more reversible option first
+
+Example: Porter says "cut costs" but Design Thinking says "invest in customer experience."
+- If data shows customers leaving due to experience -> Customer wins
+- If data shows healthy satisfaction but margin erosion -> Constraint wins, find THE bottleneck
+- If both are ambiguous -> Reversibility test: which can be undone more easily? Do that first.
+
+## Input Schema Standard
+
+All frameworks accept problem descriptions in natural language. `/think` normalizes input as:
+```
+{
+  problem: "description",
+  industry: "auto-detected",
+  scope: "org/team/personal",
+  urgency: "crisis/planning/exploration"
+}
+```
+
+- **industry**: Auto-detected from keywords, company context, or explicitly stated. Used for Industry-Specific Routing.
+- **scope**: Determines how many frameworks to apply (personal = 1, org = 2-3)
+- **urgency**: Crisis -> fast frameworks (OODA, TOC:Five Steps); Planning -> comprehensive (Porter, BSC, Wardley); Exploration -> creative (Blue Ocean, Design Thinking, TRIZ)
+
+## Fallback Strategy
+
+If no framework matches after initial classification:
+
+1. **Ask 3 Socratic questions** to clarify the problem:
+   - "What would success look like specifically?"
+   - "What have you already tried?"
+   - "What's the biggest constraint you face?"
+2. **Re-classify** with additional context from the answers
+3. **If still no match**: Apply **First Principles** as the universal default — strip assumptions, find fundamentals, reconstruct
+4. **If the problem is about people/emotions**: Apply **Design Thinking empathy phase** — the problem needs reframing from the human perspective before any analytical framework applies
 
 ## Rules
 1. NEVER skip the classification step — always explain why you chose a framework

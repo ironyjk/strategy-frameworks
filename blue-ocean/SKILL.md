@@ -1,6 +1,7 @@
 ---
 name: blue-ocean
-description: "Blue Ocean Strategy (Kim & Mauborgne) — create uncontested market space instead of competing in bloody red oceans. Use when the user wants to find new markets, differentiate radically, or escape price wars."
+version: "1.1.0"
+description: "Blue Ocean Strategy (Kim & Mauborgne) — create uncontested market space instead of competing in bloody red oceans. Includes Blue Ocean Shift (2017) process, Buyer Utility Map, and Pioneer-Migrator-Settler Map."
 tools: ["Read", "Write", "Edit", "Agent"]
 ---
 
@@ -95,8 +96,89 @@ Tier 3: [who and why]
 [buyer utility / price / cost / adoption check]
 ```
 
+## Blue Ocean Shift Process (2017 — 5 Steps)
+
+Kim & Mauborgne's 2017 book provides a systematic process for making the shift:
+
+### Step 1: Get Started
+- Choose the right scope (business, product line, or specific offering)
+- Build the right team (cross-functional, includes frontline people)
+- Agree on the process — this is not brainstorming, it is structured exploration
+
+### Step 2: Understand Where You Are
+- Draw the **As-Is Strategy Canvas** of your current industry
+- Identify which factors everyone competes on
+- See where your company's value curve overlaps competitors (red ocean convergence)
+- Confront the brutal truth: "We look just like everyone else"
+
+### Step 3: Imagine Where You Could Be
+- Explore the **Six Paths Framework** systematically (see `references/six-paths-detail.md`)
+- Interview noncustomers across all three tiers
+- Conduct field visits — get out of the office
+- Identify pain points and unexplored utility spaces
+
+### Step 4: Find How to Get There
+- Build the **ERRC Grid** (Eliminate-Reduce-Raise-Create)
+- Draw the **To-Be Strategy Canvas** showing your new value curve
+- Validate with the **Buyer Utility Map** (see `references/buyer-utility-map.md`)
+- Test the BOI Index (utility, price, cost, adoption)
+- Rapid prototyping and market testing
+
+### Step 5: Make Your Move
+- Launch the blue ocean offering
+- Execute with blue ocean fair process (engagement, explanation, expectation clarity)
+- Iterate based on market feedback
+- Continuously monitor for imitation and next shift opportunities
+
+## Buyer Utility Map
+
+A 6x6 matrix to identify where untapped utility exists. See `references/buyer-utility-map.md` for full detail.
+
+```
+              Purchase  Delivery  Use  Supplements  Maintenance  Disposal
+            ┌─────────┬─────────┬─────┬────────────┬────────────┬─────────┐
+Productivity│         │         │     │            │            │         │
+Simplicity  │         │         │     │            │            │         │
+Convenience │         │         │  *  │            │            │         │
+Risk        │         │         │     │            │            │         │
+Fun/Image   │         │         │     │            │            │         │
+Environment │         │         │     │            │            │         │
+            └─────────┴─────────┴─────┴────────────┴────────────┴─────────┘
+
+* = Most incumbents compete here. Blue ocean = empty spaces.
+```
+
+**6 Stages of the Buyer Experience Cycle**: Purchase, Delivery, Use, Supplements, Maintenance, Disposal
+**6 Utility Levers**: Customer Productivity, Simplicity, Convenience, Risk Reduction, Fun & Image, Environmental Friendliness
+
+## Pioneer-Migrator-Settler (PMS) Map
+
+Plot your portfolio to assess future growth potential:
+
+```
+                    GROWTH POTENTIAL
+         High ─────────────────────── Low
+         
+         Pioneers      Migrators      Settlers
+         (blue ocean)  (value improve) (me-too)
+         ┌──────────┬──────────────┬──────────┐
+  Today  │    ●     │   ● ●        │  ● ● ●   │
+         ├──────────┼──────────────┼──────────┤
+  Target │  ● ● ●  │   ●          │    ●      │
+         └──────────┴──────────────┴──────────┘
+```
+
+- **Pioneers**: Offerings with unprecedented value — blue ocean moves
+- **Migrators**: Better than competition but not fundamentally different
+- **Settlers**: Me-too offerings, competing on price/incremental improvements
+
+**Healthy portfolio**: Shift weight toward Pioneers over time. If mostly Settlers, the company is vulnerable to disruption and margin erosion.
+
 ## Sub-commands
-- `/blue-ocean` — Full Blue Ocean analysis
+- `/blue-ocean` — Full Blue Ocean analysis (includes Shift process)
 - `/blue-ocean:canvas` — Draw a strategy canvas for your industry
 - `/blue-ocean:errc` — Four Actions Framework (Eliminate/Reduce/Raise/Create)
 - `/blue-ocean:paths` — Six Paths to find blue ocean opportunities
+- `/blue-ocean:shift` — Blue Ocean Shift 5-step guided process
+- `/blue-ocean:utility` — Buyer Utility Map analysis
+- `/blue-ocean:pms` — Pioneer-Migrator-Settler portfolio map

@@ -1,6 +1,7 @@
 ---
 name: drucker
-description: "Drucker's Management Frameworks (Peter Drucker) — MBO (Management by Objectives), Five Essential Questions, Effective Executive habits. The foundation of modern management. Use for goal-setting, organizational self-assessment, and executive effectiveness."
+version: "1.1.0"
+description: "Drucker's Management Frameworks (Peter Drucker) — MBO (Management by Objectives), Five Essential Questions, Effective Executive habits, Seven Sources of Innovation. The foundation of modern management. Use for goal-setting, organizational self-assessment, executive effectiveness, and systematic innovation."
 tools: ["Read", "Write", "Edit", "Agent"]
 ---
 
@@ -82,6 +83,29 @@ Ask: "What can I contribute that will significantly affect the performance of th
 - Define the boundary conditions (what must this decision accomplish?)
 - Start with what is RIGHT, not what is acceptable
 - Build in feedback mechanisms
+
+## Framework 4: Seven Sources of Innovation (Innovation and Entrepreneurship, 1985)
+
+Drucker argued that innovation is not about genius or inspiration — it is a **discipline** that can be learned and practiced. He identified seven sources, ordered by reliability and predictability.
+
+### Within the enterprise or industry:
+1. **The Unexpected** — unexpected success, failure, or outside event
+2. **Incongruity** — gap between reality and assumptions
+3. **Process Need** — weak link in existing process
+4. **Industry/Market Structure Change** — disruption in industry
+
+### Outside the enterprise:
+5. **Demographics** — population changes
+6. **Changes in Perception** — glass half empty vs half full
+7. **New Knowledge** — scientific/technical/social
+
+"Systematic innovation consists in the purposeful, organized search for changes and in the systematic analysis of the opportunities such changes might offer."
+
+### How to Use
+- Scan all seven sources regularly (quarterly review)
+- Sources 1-4 are most reliable and fastest to exploit
+- Source 7 (new knowledge) is the most glamorous but least predictable — longest lead time, highest failure rate
+- Most successful innovations combine multiple sources
 
 ## Key Drucker Quotes as Decision Filters
 - "The purpose of a business is to create a customer"

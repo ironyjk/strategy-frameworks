@@ -1,5 +1,6 @@
 ---
 name: design-thinking
+version: "1.1.0"
 description: "Design Thinking (Stanford d.school / IDEO) — human-centered innovation through Empathize, Define, Ideate, Prototype, Test. Use when building products/services, improving customer experience, or solving ambiguous problems."
 tools: ["Read", "Write", "Edit", "Agent"]
 ---
@@ -59,13 +60,70 @@ Build to think:
 Output: Testable artifact (even if ugly)
 
 ### Phase 5: TEST (테스트)
-Learn from users:
+Learn from users through qualitative AND quantitative methods:
+
+#### Qualitative Testing
 - **Show, don't tell**: Let users interact with the prototype
 - **Observe**: Watch for confusion, delight, workarounds
 - **Iterate**: What worked? What didn't? What surprised you?
 - **Pivot or persevere**: Back to any earlier phase as needed
 
-Output: Validated learnings → iterate or ship
+#### Quantitative Validation Methods
+
+**A/B Testing**
+- Split users into control (A) and variant (B) groups
+- Change ONE variable at a time
+- Measure: conversion rate, completion rate, engagement, revenue
+- Statistical significance: minimum ~100 samples per variant for 95% confidence
+- Duration: at least 1-2 full business cycles to account for variability
+
+**Usability Testing Protocol**
+- Recruit 5-8 representative users per round (Nielsen: 5 users find 85% of issues)
+- Define 3-5 key tasks to complete
+- Measure quantitatively:
+  - **Task success rate**: % of users who complete each task (target: >78%)
+  - **Time-on-task**: seconds to complete (compare against benchmark)
+  - **Error rate**: wrong clicks, backtracking, dead ends per task
+  - **SUS (System Usability Scale)**: 10-question standardized survey, score 0-100
+    - Below 50: unacceptable
+    - 50-70: marginal
+    - 70-85: good
+    - Above 85: excellent
+  - **Learnability**: task success rate on 1st attempt vs 3rd attempt
+
+**NPS (Net Promoter Score)**
+- Single question: "How likely are you to recommend this to a friend or colleague?" (0-10)
+- Promoters (9-10) - Detractors (0-6) = NPS
+- Passives (7-8) are excluded from calculation
+- Score range: -100 to +100
+- Benchmarks: >0 good, >30 great, >70 world-class
+- Always follow up: "What is the primary reason for your score?"
+
+**Success Metrics Framework (DVF)**
+
+| Dimension | Question | Metrics |
+|-----------|----------|---------|
+| **Desirability** | Do users want it? | Engagement rate, daily active users, adoption rate, retention (Day 1/7/30), session length, NPS |
+| **Feasibility** | Can we build it? | Technical complexity score, development timeline, tech stack readiness, team skill gaps, integration risk |
+| **Viability** | Does the business work? | Unit economics (margin per user), CAC (Customer Acquisition Cost), LTV (Lifetime Value), LTV/CAC ratio (target >3x), payback period, break-even timeline |
+
+All three must be true for a solution to succeed. If any dimension fails:
+- Low Desirability + High Feasibility + High Viability = "solution looking for a problem"
+- High Desirability + Low Feasibility + High Viability = "technically impossible (yet)"
+- High Desirability + High Feasibility + Low Viability = "great product, bad business"
+
+#### Test → Learn → Iterate Loop
+```
+TEST ──▶ MEASURE ──▶ LEARN ──▶ DECIDE
+  ▲                              │
+  │    ┌─── Iterate (same phase) ◄── Minor issues
+  │    │
+  └────┤─── Pivot (earlier phase) ◄── Fundamental issues
+       │
+       └─── Ship (move forward)   ◄── Validated
+```
+
+Output: Validated learnings (qualitative + quantitative) → iterate or ship
 
 ## Output Format
 
@@ -98,8 +156,13 @@ Time to build: [estimate]
 
 🧪 TEST
 Test with: [who]
-Success metric: [what to measure]
+Method: [qualitative observation / A-B test / usability protocol / NPS]
+Success metrics:
+• Desirability: [metric + target]
+• Feasibility: [metric + target]
+• Viability: [metric + target]
 Key question: [what to learn]
+Go/No-go criteria: [what must be true to proceed]
 ```
 
 ## Sub-commands
@@ -107,3 +170,8 @@ Key question: [what to learn]
 - `/design-thinking:empathy` — Deep empathy mapping for a user group
 - `/design-thinking:hmw` — Generate "How Might We" questions from a problem
 - `/design-thinking:ideate` — Brainstorm session with SCAMPER and analogies
+- `/design-thinking:test` — Design a quantitative test plan (A/B, usability, NPS, DVF metrics)
+
+## References
+- `design-thinking/references/testing-methods.md` — Complete guide to quantitative and qualitative testing
+- `design-thinking/references/empathy-tools.md` — Empathy mapping tools and interview techniques

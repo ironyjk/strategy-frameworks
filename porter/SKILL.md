@@ -1,6 +1,7 @@
 ---
 name: porter
-description: "Porter's Frameworks (Michael Porter) — Five Forces for industry analysis, Value Chain for competitive advantage, Generic Strategies for positioning. The gold standard of competitive strategy analysis."
+version: "1.1.0"
+description: "Porter's Frameworks (Michael Porter) — Five Forces for industry analysis, Value Chain for competitive advantage, Generic Strategies for positioning, Diamond Model for national advantage. The gold standard of competitive strategy analysis."
 tools: ["Read", "Write", "Edit", "Agent"]
 ---
 
@@ -127,8 +128,74 @@ Recommendation: [what to strengthen or change]
 "Stuck in the middle" risk: [yes/no and why]
 ```
 
+## Framework 4: Diamond Model (National Competitive Advantage)
+
+Porter's Diamond explains why certain nations (or regions) become home to internationally competitive firms in particular industries.
+
+```
+              ┌──────────────────────┐
+              │  Firm Strategy,      │
+              │  Structure & Rivalry │
+              └──────────┬───────────┘
+                         │
+          ┌──────────────┼──────────────┐
+          ▼              │              ▼
+┌──────────────────┐     │    ┌──────────────────┐
+│ Factor           │◀────┼───▶│ Demand           │
+│ Conditions       │     │    │ Conditions       │
+└──────────────────┘     │    └──────────────────┘
+          ▲              │              ▲
+          └──────────────┼──────────────┘
+                         ▼
+              ┌──────────────────────┐
+              │ Related & Supporting │
+              │ Industries           │
+              └──────────────────────┘
+
+        + Chance │ + Government (supplementary factors)
+```
+
+### Factor Conditions
+- Basic factors: natural resources, climate, location, demographics
+- Advanced factors: skilled labor, research infrastructure, specialized knowledge
+- **Key insight**: Advanced factors (created, not inherited) matter more for sustained advantage
+
+### Demand Conditions
+- Sophisticated, demanding local buyers push firms to innovate
+- Size matters less than quality and anticipatory nature of demand
+- Local demand composition shapes how firms perceive and respond to buyer needs
+
+### Related and Supporting Industries
+- Internationally competitive supplier industries create advantages downstream
+- Clusters of related industries foster information flow and technical interchange
+- Example: Italian leather footwear cluster (tanneries + designers + machinery + fashion)
+
+### Firm Strategy, Structure, and Rivalry
+- Domestic rivalry is the single most powerful driver of competitive advantage
+- Intense local competition forces efficiency, innovation, and global ambition
+- National management styles and organizational norms shape which industries succeed
+
+### Chance and Government (Supplementary)
+- **Chance**: Inventions, wars, external political shifts, major demand shifts
+- **Government**: Policy, education investment, regulation, subsidies — can enhance or detract from each diamond point
+
+## Porter's 2008 HBR Update: The Sixth Force
+
+In his 2008 Harvard Business Review article "The Five Competitive Forces That Shape Strategy," Porter addressed **complementors** (a concept from Brandenburger & Nalebuff):
+
+- **Complementors** produce products/services used together with the industry's products
+- Examples: Software for hardware, hot dogs for mustard, apps for smartphones
+- Complementors are NOT a sixth force per se — Porter argues they affect the five forces rather than constituting a separate force
+- However, they can **raise or lower barriers** to entry, **increase or decrease** buyer/supplier power, and **affect** threat of substitutes
+- Analysts should assess: "How do complementors affect each of the five forces?"
+- When complements are strong, they raise industry demand (positive) but may also increase buyer power if buyers can play complement providers against each other
+
+See `references/five-forces-detail.md` for detailed analysis questions for each force.
+See `references/industry-examples.md` for example Five Forces analyses across industries.
+
 ## Sub-commands
-- `/porter` — Full Porter analysis (Five Forces + Value Chain + Strategy)
+- `/porter` — Full Porter analysis (Five Forces + Value Chain + Strategy + Diamond)
 - `/porter:forces` — Five Forces analysis only
 - `/porter:chain` — Value Chain analysis only
 - `/porter:strategy` — Generic strategy assessment and recommendation
+- `/porter:diamond` — Diamond Model analysis for national/regional competitive advantage

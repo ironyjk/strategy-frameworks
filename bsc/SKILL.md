@@ -1,6 +1,7 @@
 ---
 name: bsc
-description: "Balanced Scorecard (Kaplan & Norton) — translate strategy into action across 4 perspectives: Financial, Customer, Internal Process, Learning & Growth. Use for strategic planning, KPI design, and aligning organization around strategy."
+version: "1.1.0"
+description: "Balanced Scorecard (Kaplan & Norton) — translate strategy into action across 4 perspectives: Financial, Customer, Internal Process, Learning & Growth. Includes Strategy-Focused Organization principles. Use for strategic planning, KPI design, and aligning organization around strategy."
 tools: ["Read", "Write", "Edit", "Agent"]
 ---
 
@@ -90,6 +91,55 @@ Break down organization-level BSC into department-level and individual-level sco
 - Monthly: KPI tracking, traffic lights (Green/Yellow/Red)
 - Quarterly: Strategy review, adjust initiatives
 - Annual: Strategy refresh, new targets
+
+## Five Principles of a Strategy-Focused Organization
+
+Kaplan and Norton observed that most organizations fail not at strategy formulation but at **strategy execution**. They identified five principles that distinguish strategy-focused organizations:
+
+### Principle 1: Translate Strategy into Operational Terms
+- Use **strategy maps** to visualize cause-and-effect across all four perspectives
+- The BSC itself is the translation mechanism: abstract strategy becomes concrete objectives, measures, targets, and initiatives
+- "You can't manage what you can't describe"
+
+### Principle 2: Align the Organization to the Strategy
+- Cascade scorecards from corporate to business unit to department
+- Each unit creates its own BSC derived from the level above
+- Shared services (HR, IT, Finance) get their own BSC aligned to internal customers
+- Break down silos through cross-perspective linkages
+
+### Principle 3: Make Strategy Everyone's Everyday Job
+- **Strategic awareness**: communicate strategy to all employees (not just top management)
+- **Personal scorecards**: individual objectives linked to strategic objectives
+- **Incentive compensation**: tie bonuses/rewards to balanced scorecard metrics
+- "Strategy must migrate from the 10 people in the boardroom to the 10,000 people in the organization"
+
+### Principle 4: Make Strategy a Continual Process
+- **Link budgets to strategy**: allocate resources based on strategic priorities (STRATEX)
+- **Analytics and information systems**: provide data for ongoing learning
+- **Strategy review meetings**: separate from operational reviews (monthly strategy meetings)
+- Treat strategy as a **hypothesis** to be tested and refined, not a fixed plan
+
+### Principle 5: Mobilize Change Through Executive Leadership
+- Strategy execution requires active, visible executive sponsorship
+- Establish a **strategy management office** (StratOps)
+- CEO and leadership team own the scorecard process
+- Governance rhythm: who reviews what, when, and what decisions result
+
+## Strategy as a Hypothesis
+
+A key Kaplan & Norton insight: **the BSC is not just a measurement system — it is a set of cause-and-effect hypotheses to be tested.**
+
+Example hypothesis chain:
+```
+IF we invest in employee training (Learning & Growth)
+THEN process quality improves (Internal Process)
+THEN customer satisfaction increases (Customer)
+THEN revenue grows (Financial)
+```
+
+Each link is a hypothesis. The BSC provides data to validate or invalidate each link. When a link fails (training happened but quality didn't improve), that's not failure — that's learning. Revise the hypothesis and test again.
+
+This makes strategy a **continual learning process**, not a one-time planning exercise.
 
 ## Common Mistakes
 1. Too many measures (ideal: 15-20 total, ~4-5 per perspective)
