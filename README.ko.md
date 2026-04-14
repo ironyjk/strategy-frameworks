@@ -78,6 +78,24 @@ git clone https://github.com/ironyjk/triz-agents.git /tmp/triz
 cp -r /tmp/triz/.claude/skills/triz .claude/skills/
 ```
 
+### 자동 업데이트 (권장)
+
+프로젝트의 `CLAUDE.md`에 아래 내용을 추가하면 세션 시작 시 하루 1회 자동으로 업데이트를 체크합니다:
+
+```markdown
+## 전략 프레임워크 자동 업데이트
+세션 시작 시 `bash .claude/skills/think/check-update.sh` 를 백그라운드로 실행하세요.
+"updated" 결과가 나오면 사용자에게 알려주세요. 하루 1회만 체크합니다.
+```
+
+GitHub에서 새 버전이 있으면 30개 도구를 자동 업데이트합니다. 1초 이내 실행, 이미 체크했으면 스킵.
+
+### 수동 업데이트
+
+```bash
+bash .claude/skills/think/check-update.sh
+```
+
 ### 부분 설치
 
 ```bash

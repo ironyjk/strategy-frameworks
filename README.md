@@ -46,7 +46,19 @@ cp -r /tmp/triz/.claude/skills/triz .claude/skills/
 
 Then use `/think [your problem]` — it automatically selects the best tool(s).
 
-### Update
+### Auto-Update (Recommended)
+
+Add this line to your project's `CLAUDE.md` to auto-check for updates once per day on session start:
+
+```markdown
+## Strategy Frameworks Auto-Update
+On session start, run `bash .claude/skills/think/check-update.sh` in the background.
+If it returns "updated", inform the user. Max once per 24 hours.
+```
+
+The script checks GitHub for new commits and auto-updates all 30 tools if a new version is available. It runs silently in <1 second and skips if already checked today.
+
+### Manual Update
 
 ```bash
 # Update all 30 tools to latest version
