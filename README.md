@@ -48,15 +48,40 @@ Then use `/think [your problem]` — it automatically selects the best tool(s).
 
 ### Auto-Update (Recommended)
 
-Add this line to your project's `CLAUDE.md` to auto-check for updates once per day on session start:
+Register a `SessionStart` hook in your Claude Code settings to auto-check for updates on every session start:
 
-```markdown
-## Strategy Frameworks Auto-Update
-On session start, run `bash .claude/skills/think/check-update.sh` in the background.
-If it returns "updated", inform the user. Max once per 24 hours.
+**Option A: Auto-register during install**
+```bash
+curl -fsSL https://raw.githubusercontent.com/ironyjk/strategy-frameworks/master/install.sh | bash -s -- --with-hook
 ```
 
-The script checks GitHub for new commits and auto-updates all 30 tools if a new version is available. It runs silently in <1 second and skips if already checked today.
+**Option B: Manual hook registration**
+
+Add to `.claude/settings.local.json` (or `~/.claude/settings.json`):
+
+```json
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/skills/think/check-update.sh &"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+The `&` detaches the process so it runs in the background without blocking session start. The script:
+- Checks GitHub API for latest commit SHA (~0.5s)
+- Compares with local version
+- Updates all 30 tools if newer version exists
+- Skips if already checked within 24 hours
+- Fails silently on network errors
 
 ### Manual Update
 

@@ -80,15 +80,35 @@ cp -r /tmp/triz/.claude/skills/triz .claude/skills/
 
 ### 자동 업데이트 (권장)
 
-프로젝트의 `CLAUDE.md`에 아래 내용을 추가하면 세션 시작 시 하루 1회 자동으로 업데이트를 체크합니다:
+Claude Code settings에 `SessionStart` 훅을 등록하면 세션 시작 시 자동으로 업데이트를 체크합니다.
 
-```markdown
-## 전략 프레임워크 자동 업데이트
-세션 시작 시 `bash .claude/skills/think/check-update.sh` 를 백그라운드로 실행하세요.
-"updated" 결과가 나오면 사용자에게 알려주세요. 하루 1회만 체크합니다.
+**방법 A: 설치 시 자동 등록**
+```bash
+curl -fsSL https://raw.githubusercontent.com/ironyjk/strategy-frameworks/master/install.sh | bash -s -- --with-hook
 ```
 
-GitHub에서 새 버전이 있으면 30개 도구를 자동 업데이트합니다. 1초 이내 실행, 이미 체크했으면 스킵.
+**방법 B: 수동 등록**
+
+`.claude/settings.local.json` (또는 `~/.claude/settings.json`)에 추가:
+
+```json
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/skills/think/check-update.sh &"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+`&`로 백그라운드 실행하여 세션 시작을 블로킹하지 않습니다. 하루 1회만 체크, 네트워크 에러 시 조용히 스킵.
 
 ### 수동 업데이트
 

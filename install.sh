@@ -4,12 +4,21 @@
 #
 # Usage:
 #   curl -fsSL https://raw.githubusercontent.com/ironyjk/strategy-frameworks/master/install.sh | bash
-#   # or
+#   curl ... | bash -s -- --with-hook   # also register auto-update hook
 #   bash install.sh [target_dir]
+#   bash install.sh --with-hook
 
 set -e
 
-TARGET="${1:-.claude/skills}"
+# Parse args
+WITH_HOOK=false
+TARGET=".claude/skills"
+for arg in "$@"; do
+    case "$arg" in
+        --with-hook) WITH_HOOK=true ;;
+        *) TARGET="$arg" ;;
+    esac
+done
 TEMP_DIR=$(mktemp -d)
 
 echo ""
@@ -78,6 +87,39 @@ else
     echo -e "  ${YELLOW}⚠ Installed with $FAILED failures${NC}"
 fi
 
+# Register SessionStart hook if --with-hook
+if [ "$WITH_HOOK" = true ]; then
+    SETTINGS_FILE=".claude/settings.local.json"
+    if [ -f "$SETTINGS_FILE" ]; then
+        # Check if hook already exists
+        if grep -q "check-update.sh" "$SETTINGS_FILE" 2>/dev/null; then
+            echo -e "  ${GREEN}✓${NC} Auto-update hook already registered"
+        else
+            # Use python/node to safely merge JSON, or append
+            if command -v python3 &>/dev/null; then
+                python3 -c "
+import json
+with open('$SETTINGS_FILE', 'r') as f:
+    cfg = json.load(f)
+hooks = cfg.setdefault('hooks', {})
+ss = hooks.setdefault('SessionStart', [])
+ss.append({'hooks': [{'type': 'command', 'command': 'bash .claude/skills/think/check-update.sh &'}]})
+with open('$SETTINGS_FILE', 'w') as f:
+    json.dump(cfg, f, indent=2)
+" && echo -e "  ${GREEN}✓${NC} Auto-update hook registered in $SETTINGS_FILE"
+            else
+                echo -e "  ${YELLOW}⚠${NC} python3 not found. Add SessionStart hook manually."
+            fi
+        fi
+    else
+        # Create minimal settings file
+        mkdir -p .claude
+        echo '{"hooks":{"SessionStart":[{"hooks":[{"type":"command","command":"bash .claude/skills/think/check-update.sh &"}]}]}}' | python3 -m json.tool > "$SETTINGS_FILE" 2>/dev/null && \
+            echo -e "  ${GREEN}✓${NC} Created $SETTINGS_FILE with auto-update hook" || \
+            echo -e "  ${YELLOW}⚠${NC} Could not create settings file. Add hook manually."
+    fi
+fi
+
 echo ""
 echo "  Usage:"
 echo "    /think [describe your problem]"
@@ -86,9 +128,16 @@ echo "    /triz:contradiction [technical problem]"
 echo "    /porter:forces [industry]"
 echo "    /wardley [business context]"
 echo ""
-echo "  Update later:"
-echo "    bash $TARGET/../update.sh"
-echo "    # or re-run this installer"
+echo "  Auto-update:"
+if [ "$WITH_HOOK" = true ]; then
+    echo "    ✓ SessionStart hook registered — checks daily"
+else
+    echo "    Re-run with --with-hook to register auto-update"
+    echo "    curl ... | bash -s -- --with-hook"
+fi
+echo ""
+echo "  Manual update:"
+echo "    bash $TARGET/think/check-update.sh"
 echo ""
 echo "  github.com/ironyjk"
 echo "  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
