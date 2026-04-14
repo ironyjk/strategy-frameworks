@@ -19,9 +19,14 @@ Zero dependencies. Just install and use.
 
 ## Installation
 
-### Quick Install (all 30 tools at once)
+### One-Line Install (all 30 tools)
 
-The `/think` meta-agent requires all 29 framework tools. Install everything:
+```bash
+cd /path/to/your/project
+curl -fsSL https://raw.githubusercontent.com/ironyjk/strategy-frameworks/master/install.sh | bash
+```
+
+Or manually:
 
 ```bash
 cd /path/to/your/project
@@ -41,6 +46,16 @@ cp -r /tmp/triz/.claude/skills/triz .claude/skills/
 
 Then use `/think [your problem]` — it automatically selects the best tool(s).
 
+### Update
+
+```bash
+# Update all 30 tools to latest version
+curl -fsSL https://raw.githubusercontent.com/ironyjk/strategy-frameworks/master/update.sh | bash
+
+# Windows
+update.bat
+```
+
 ### Partial Install
 
 ```bash
@@ -48,7 +63,7 @@ Then use `/think [your problem]` — it automatically selects the best tool(s).
 cp -r wardley porter /path/to/your/project/.claude/skills/
 ```
 
-Note: `/think` requires all 29 tools to be installed for full auto-routing.
+Note: `/think` requires all 30 tools to be installed for full auto-routing.
 
 ## Usage
 
