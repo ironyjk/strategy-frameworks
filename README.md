@@ -19,17 +19,36 @@ Zero dependencies. Just install and use.
 
 ## Installation
 
-Copy the skill directories into your Claude Code project:
+### Quick Install (all 30 tools at once)
+
+The `/think` meta-agent requires all 29 framework tools. Install everything:
 
 ```bash
-# Copy all frameworks
-cp -r wardley ooda systems-thinking blue-ocean design-thinking \
-      first-principles porter drucker bsc \
-      /path/to/your/project/.claude/skills/
+cd /path/to/your/project
 
-# Or just the ones you need
+# 1. Strategy Frameworks (9 tools + think agent)
+git clone https://github.com/ironyjk/strategy-frameworks.git /tmp/sf
+cp -r /tmp/sf/{wardley,ooda,systems-thinking,blue-ocean,design-thinking,first-principles,porter,drucker,bsc,think} .claude/skills/
+
+# 2. TOC Agents (11 tools)
+git clone https://github.com/ironyjk/toc-agents.git /tmp/toc
+cp -r /tmp/toc/.claude/skills/toc .claude/skills/
+
+# 3. TRIZ Agents (9 tools)
+git clone https://github.com/ironyjk/triz-agents.git /tmp/triz
+cp -r /tmp/triz/.claude/skills/triz .claude/skills/
+```
+
+Then use `/think [your problem]` — it automatically selects the best tool(s).
+
+### Partial Install
+
+```bash
+# Just the frameworks you need
 cp -r wardley porter /path/to/your/project/.claude/skills/
 ```
+
+Note: `/think` requires all 29 tools to be installed for full auto-routing.
 
 ## Usage
 

@@ -2,6 +2,24 @@
 name: think
 description: "Strategic Thinking Agent — automatically selects the best framework(s) from 29 tools (TOC/TRIZ/Wardley/OODA/Systems Thinking/Blue Ocean/Design Thinking/First Principles/Porter/Drucker/BSC) to solve any business problem. Just describe your problem."
 tools: ["Read", "Write", "Edit", "Agent", "Skill"]
+install: |
+  # Install all dependencies (29 framework tools):
+  # 1. This repo's 9 frameworks
+  cp -r wardley ooda systems-thinking blue-ocean design-thinking first-principles porter drucker bsc .claude/skills/
+  # 2. TOC (11 tools) — https://github.com/ironyjk/toc-agents
+  git clone https://github.com/ironyjk/toc-agents.git /tmp/toc-agents && cp -r /tmp/toc-agents/.claude/skills/toc .claude/skills/
+  # 3. TRIZ (9 tools) — https://github.com/ironyjk/triz-agents
+  git clone https://github.com/ironyjk/triz-agents.git /tmp/triz-agents && cp -r /tmp/triz-agents/.claude/skills/triz .claude/skills/
+dependencies:
+  - name: toc-agents
+    url: https://github.com/ironyjk/toc-agents
+    skills: [toc, toc:crt, toc:ec, toc:frt, toc:prt, toc:tt, toc:five-steps, toc:dbr, toc:ccpm, toc:throughput, toc:buy-in]
+  - name: triz-agents
+    url: https://github.com/ironyjk/triz-agents
+    skills: [triz, triz:ifr, triz:contradiction, triz:matrix, triz:40p, triz:ariz, triz:sufield, triz:resources, triz:trimming, triz:evolution]
+  - name: strategy-frameworks
+    url: https://github.com/ironyjk/strategy-frameworks
+    skills: [wardley, ooda, systems-thinking, blue-ocean, design-thinking, first-principles, porter, drucker, bsc]
 ---
 
 # Strategic Thinking Agent — 29 Tools, One Entry Point
