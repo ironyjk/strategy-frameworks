@@ -2,6 +2,7 @@
 name: bsc
 version: "1.1.0"
 description: "Balanced Scorecard (Kaplan & Norton) — translate strategy into action across 4 perspectives: Financial, Customer, Internal Process, Learning & Growth. Includes Strategy-Focused Organization principles. Use for strategic planning, KPI design, and aligning organization around strategy."
+user-invocable: false
 tools: ["Read", "Write", "Edit", "Agent"]
 ---
 

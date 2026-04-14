@@ -2,6 +2,7 @@
 name: wardley
 version: "1.1.0"
 description: "Wardley Mapping — visualize value chains by evolution stage to make better strategic decisions. Use when the user needs to analyze competitive positioning, build-vs-buy decisions, or identify strategic moves."
+user-invocable: false
 tools: ["Read", "Write", "Edit", "Bash", "Agent"]
 ---
 

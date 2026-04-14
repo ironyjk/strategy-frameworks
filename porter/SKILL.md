@@ -2,6 +2,7 @@
 name: porter
 version: "1.1.0"
 description: "Porter's Frameworks (Michael Porter) — Five Forces for industry analysis, Value Chain for competitive advantage, Generic Strategies for positioning, Diamond Model for national advantage. The gold standard of competitive strategy analysis."
+user-invocable: false
 tools: ["Read", "Write", "Edit", "Agent"]
 ---
 

@@ -2,6 +2,7 @@
 name: systems-thinking
 version: "1.1.0"
 description: "Systems Thinking (Peter Senge) — understand complex systems through feedback loops, mental models, and leverage points. Use when problems keep recurring, fixes backfire, or the whole is behaving differently than expected from its parts."
+user-invocable: false
 tools: ["Read", "Write", "Edit", "Agent"]
 ---
 

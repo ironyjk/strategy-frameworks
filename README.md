@@ -1,25 +1,121 @@
 # Strategy Frameworks for Claude Code
 
-9 classic strategy and management frameworks, packaged as Claude Code skills.
-Zero dependencies. Just install and use.
+29 strategy and management frameworks, 4 entry points.
+Describe your problem — AI picks the best tool(s) and runs them.
 
-## Frameworks
+## `/think` — One Command, 29 Tools
 
-| Skill | Creator | Use When |
-|-------|---------|----------|
-| `/wardley` | Simon Wardley | Strategic positioning, build-vs-buy, evolution analysis |
-| `/ooda` | John Boyd | Fast-changing situations, competitive response, crisis |
-| `/systems-thinking` | Peter Senge | Recurring problems, unintended consequences, feedback loops |
-| `/blue-ocean` | Kim & Mauborgne | Finding new markets, escaping price wars |
-| `/design-thinking` | Stanford d.school | Building products/services, customer experience |
-| `/first-principles` | Aristotle → Musk | Challenging assumptions, rebuilding from fundamentals |
-| `/porter` | Michael Porter | Industry analysis, competitive advantage, positioning |
-| `/drucker` | Peter Drucker | Goal-setting, organizational assessment, executive effectiveness |
-| `/bsc` | Kaplan & Norton | Strategic planning, KPIs, balanced performance management |
+```
+/think Our competitor is stealing key accounts with aggressive pricing. How should we respond?
+```
+
+The AI automatically:
+1. Detects keywords in your problem
+2. Selects the best 1-3 frameworks
+3. Executes them in sequence
+4. Synthesizes into a unified insight + 3 concrete actions
+
+## Commands
+
+| Command | What It Does |
+|---------|-------------|
+| `/think` | Full auto-routing: classify → select → execute → synthesize |
+| `/think:select` | Recommend frameworks only (don't execute) |
+| `/think:compare` | Apply 2-3 frameworks to the same problem and compare |
+| `/toc` | Theory of Constraints — direct access to 10 sub-tools |
+| `/triz` | TRIZ Systematic Innovation — direct access to 9 sub-tools |
+
+### TOC Sub-Commands
+
+| Command | Tool |
+|---------|------|
+| `/toc:crt` | Current Reality Tree — root cause analysis |
+| `/toc:ec` | Evaporating Cloud — resolve conflicts |
+| `/toc:frt` | Future Reality Tree — validate solutions |
+| `/toc:tt` | Transition Tree — execution plans |
+| `/toc:prt` | Prerequisite Tree — obstacle mapping |
+| `/toc:five-steps` | Five Focusing Steps — find the bottleneck |
+| `/toc:dbr` | Drum-Buffer-Rope — scheduling |
+| `/toc:ccpm` | Critical Chain — project management |
+| `/toc:throughput` | Throughput Accounting — investment decisions |
+| `/toc:buy-in` | Layers of Resistance — change management |
+
+### TRIZ Sub-Commands
+
+| Command | Tool |
+|---------|------|
+| `/triz:contradiction` | Identify technical/physical contradictions |
+| `/triz:matrix` | Contradiction Matrix → Inventive Principles |
+| `/triz:40p` | 40 Inventive Principles |
+| `/triz:ifr` | Ideal Final Result |
+| `/triz:ariz` | ARIZ — full inventive problem solving |
+| `/triz:sufield` | Substance-Field analysis |
+| `/triz:resources` | Hidden resource discovery |
+| `/triz:trimming` | Simplify by removing components |
+| `/triz:evolution` | Predict next-generation designs |
+
+## All 29 Frameworks
+
+### Diagnose — What's the problem?
+
+| Framework | Creator | Use When |
+|-----------|---------|----------|
+| **TOC** (10 tools) | Goldratt | Bottlenecks, root causes, conflicts, execution plans |
+| **Systems Thinking** | Peter Senge | Feedback loops, system archetypes, recurring problems |
+
+### Solve — How to fix it?
+
+| Framework | Creator | Use When |
+|-----------|---------|----------|
+| **TRIZ** (9 tools) | Altshuller | Technical contradictions, inventive principles |
+| **First Principles** | Aristotle → Musk | Challenge assumptions, rebuild from fundamentals |
+
+### Position — Where to compete?
+
+| Framework | Creator | Use When |
+|-----------|---------|----------|
+| **Wardley Mapping** | Simon Wardley | Value chain mapping, strategic positioning |
+| **Porter** | Michael Porter | Industry analysis, competitive advantage |
+| **Blue Ocean** | Kim & Mauborgne | Create uncontested market space |
+
+### Innovate — What to build?
+
+| Framework | Creator | Use When |
+|-----------|---------|----------|
+| **Design Thinking** | Stanford d.school | Customer-centered innovation, prototyping |
+
+### Execute — How to do it?
+
+| Framework | Creator | Use When |
+|-----------|---------|----------|
+| **OODA Loop** | John Boyd | Fast decisions, competitive response, crisis |
+| **Drucker** | Peter Drucker | MBO, executive effectiveness, innovation |
+
+### Measure — Is it working?
+
+| Framework | Creator | Use When |
+|-----------|---------|----------|
+| **BSC** | Kaplan & Norton | Balanced Scorecard, KPIs, strategy execution |
+
+## Architecture
+
+```
+/think (meta-router — user-invocable)
+├── 9 Strategy Frameworks (internal, auto-selected by /think)
+│   ├── wardley, ooda, systems-thinking
+│   ├── blue-ocean, design-thinking, first-principles
+│   └── porter, drucker, bsc
+├── /toc (user-invocable + 10 sub-commands)
+│   └── crt, ec, frt, tt, prt, five-steps, dbr, ccpm, throughput, buy-in
+└── /triz (user-invocable + 9 sub-commands)
+    └── contradiction, matrix, 40p, ifr, ariz, sufield, resources, trimming, evolution
+```
+
+The 9 strategy frameworks have `user-invocable: false` — they don't appear in the slash menu but are called internally by `/think` via the Skill tool. TOC and TRIZ remain directly accessible because power users often need specific tools.
 
 ## Installation
 
-### One-Line Install (all 30 tools)
+### One-Line Install (all 29 tools)
 
 ```bash
 cd /path/to/your/project
@@ -31,24 +127,22 @@ Or manually:
 ```bash
 cd /path/to/your/project
 
-# 1. Strategy Frameworks (9 tools + think agent)
+# 1. Strategy Frameworks (9 + think agent)
 git clone https://github.com/ironyjk/strategy-frameworks.git /tmp/sf
 cp -r /tmp/sf/{wardley,ooda,systems-thinking,blue-ocean,design-thinking,first-principles,porter,drucker,bsc,think} .claude/skills/
 
-# 2. TOC Agents (11 tools)
+# 2. TOC Agents (10 sub-tools)
 git clone https://github.com/ironyjk/toc-agents.git /tmp/toc
 cp -r /tmp/toc/.claude/skills/toc .claude/skills/
 
-# 3. TRIZ Agents (9 tools)
+# 3. TRIZ Agents (9 sub-tools)
 git clone https://github.com/ironyjk/triz-agents.git /tmp/triz
 cp -r /tmp/triz/.claude/skills/triz .claude/skills/
 ```
 
-Then use `/think [your problem]` — it automatically selects the best tool(s).
-
 ### Auto-Update (Recommended)
 
-Register a `SessionStart` hook in your Claude Code settings to auto-check for updates on every session start:
+Register a `SessionStart` hook to auto-check for updates:
 
 **Option A: Auto-register during install**
 ```bash
@@ -76,98 +170,48 @@ Add to `.claude/settings.local.json` (or `~/.claude/settings.json`):
 }
 ```
 
-The `&` detaches the process so it runs in the background without blocking session start. The script:
-- Checks GitHub API for latest commit SHA (~0.5s)
-- Compares with local version
-- Updates all 30 tools if newer version exists
-- Skips if already checked within 24 hours
-- Fails silently on network errors
-
-### Manual Update
-
-```bash
-# Update all 30 tools to latest version
-curl -fsSL https://raw.githubusercontent.com/ironyjk/strategy-frameworks/master/update.sh | bash
-
-# Windows
-update.bat
-```
+The `&` runs in the background without blocking session start. Checks once per 24 hours, fails silently on network errors.
 
 ### Partial Install
 
 ```bash
 # Just the frameworks you need
-cp -r wardley porter /path/to/your/project/.claude/skills/
+cp -r wardley porter .claude/skills/
 ```
 
-Note: `/think` requires all 30 tools to be installed for full auto-routing.
+> `/think` requires all 29 tools for full auto-routing.
 
 ### Other Platforms
 
-These frameworks work with any LLM, not just Claude Code. The SKILL.md and references/ files are standard markdown.
+These frameworks work with any LLM. The SKILL.md and references/ files are standard markdown.
 
-**Cursor**
-```bash
-# Copy framework content into .cursorrules or .cursor/rules/
-cat wardley/SKILL.md >> .cursorrules
-# Or use as project-level rules
-cp -r wardley/ .cursor/rules/
-```
+**Cursor** — `cat wardley/SKILL.md >> .cursorrules`
 
-**ChatGPT (Custom GPTs)**
-1. Create a new GPT at chat.openai.com/gpts
-2. Upload SKILL.md + references/*.md as Knowledge files
-3. Set instructions: "You are a strategy consultant. Use the uploaded frameworks to analyze problems."
-4. For /think behavior: upload think/SKILL.md as the main instruction
+**ChatGPT (Custom GPTs)** — Upload SKILL.md + references as Knowledge files
 
-**Gemini**
-- Paste SKILL.md content into System Instructions
-- Or use Google AI Studio → System Prompt
+**Gemini** — Paste SKILL.md into System Instructions
 
-**Open Source LLMs (Llama, Hermes, etc.)**
-```python
-# Load as system prompt
-with open("wardley/SKILL.md") as f:
-    system_prompt = f.read()
-# Pass to your LLM inference
-```
+**Open Source LLMs** — Load as system prompt
 
-**Windsurf / Cline / Aider**
-- Copy SKILL.md content to the tool's system prompt or rules file
-- Most coding agents support markdown instructions natively
+**As Human Reference** — The `references/` docs are standalone guides, no AI needed.
 
-**As Human Reference**
-- The `references/` documents are standalone guides — no AI needed
-- Print them, use in workshops, or share with your team
+## Recommended Pipelines by Problem Type
 
-## Usage
+| Situation | Recommended Pipeline |
+|-----------|---------------------|
+| Business is struggling | TOC:CRT → TOC:EC → TOC:FRT → TOC:TT |
+| Looking for new business | Porter:Forces → Blue Ocean:ERRC → Wardley → BSC |
+| Innovate a product | Design Thinking → TRIZ:Contradiction → First Principles |
+| Competitor threat response | OODA → Porter:Forces → TOC:Five Steps |
+| Strategic planning | Drucker:5Q → Wardley:Map → BSC → Drucker:MBO |
+| Operations improvement | TOC:Five Steps → Systems Thinking → TOC:DBR |
+| Something's wrong but can't pinpoint | Systems Thinking → TOC:CRT → TOC:EC |
 
-```
-/wardley          — Full Wardley Map session
-/porter:forces    — Five Forces industry analysis
-/drucker:5q       — Drucker's Five Essential Questions
-/ooda             — OODA Loop rapid decision analysis
-/blue-ocean:errc  — Eliminate/Reduce/Raise/Create grid
-/bsc:map          — Strategy Map across 4 perspectives
-```
+## Related Projects
 
-## Complementary Frameworks
-
-These pair well with:
-- **[TOC Agents](https://github.com/ironyjk/toc-agents)** — Theory of Constraints (Goldratt) — 11 tools for constraint analysis
-- **[TRIZ Agents](https://github.com/ironyjk/triz-agents)** — TRIZ (Altshuller) — 9 tools for inventive problem solving
-
-## The Full Toolkit
-
-```
-Diagnose  → TOC (find the constraint)
-Solve     → TRIZ (resolve contradictions)
-Position  → Wardley / Porter (strategic landscape)
-Innovate  → Blue Ocean / Design Thinking / First Principles
-Execute   → OODA (fast decisions) / Drucker MBO (objectives)
-Measure   → BSC (balanced KPIs)
-Understand → Systems Thinking (feedback loops)
-```
+- **[TOC Agents](https://github.com/ironyjk/toc-agents)** — Goldratt's Theory of Constraints, 10 tools
+- **[TRIZ Agents](https://github.com/ironyjk/triz-agents)** — Altshuller's TRIZ, 9 tools
+- **[HowToTalk](https://github.com/ironyjk/howtotalk)** — 13 communication frameworks with auto-routing
 
 ## License
 

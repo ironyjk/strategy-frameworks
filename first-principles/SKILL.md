@@ -2,6 +2,7 @@
 name: first-principles
 version: "1.1.0"
 description: "First Principles Thinking — break problems down to fundamental truths and reason up from there. Use when conventional wisdom is wrong, costs seem fixed, or 'that's how it's always been done' blocks progress."
+user-invocable: false
 tools: ["Read", "Write", "Edit", "Agent"]
 ---
 

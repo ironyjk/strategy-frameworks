@@ -2,6 +2,7 @@
 name: blue-ocean
 version: "1.1.0"
 description: "Blue Ocean Strategy (Kim & Mauborgne) — create uncontested market space instead of competing in bloody red oceans. Includes Blue Ocean Shift (2017) process, Buyer Utility Map, and Pioneer-Migrator-Settler Map."
+user-invocable: false
 tools: ["Read", "Write", "Edit", "Agent"]
 ---
 

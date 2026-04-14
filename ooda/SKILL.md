@@ -2,6 +2,7 @@
 name: ooda
 version: "1.1.0"
 description: "OODA Loop — John Boyd's rapid decision-making framework. Observe-Orient-Decide-Act. Use for fast-changing situations, competitive response, crisis management, or when the user needs to outpace competitors."
+user-invocable: false
 tools: ["Read", "Write", "Edit", "Agent"]
 ---
 

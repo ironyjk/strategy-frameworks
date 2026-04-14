@@ -2,6 +2,7 @@
 name: design-thinking
 version: "1.1.0"
 description: "Design Thinking (Stanford d.school / IDEO) — human-centered innovation through Empathize, Define, Ideate, Prototype, Test. Use when building products/services, improving customer experience, or solving ambiguous problems."
+user-invocable: false
 tools: ["Read", "Write", "Edit", "Agent"]
 ---
 

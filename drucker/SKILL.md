@@ -2,6 +2,7 @@
 name: drucker
 version: "1.1.0"
 description: "Drucker's Management Frameworks (Peter Drucker) — MBO (Management by Objectives), Five Essential Questions, Effective Executive habits, Seven Sources of Innovation. The foundation of modern management. Use for goal-setting, organizational self-assessment, executive effectiveness, and systematic innovation."
+user-invocable: false
 tools: ["Read", "Write", "Edit", "Agent"]
 ---
 
