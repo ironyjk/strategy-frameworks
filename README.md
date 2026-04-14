@@ -1,0 +1,69 @@
+# Strategy Frameworks for Claude Code
+
+9 classic strategy and management frameworks, packaged as Claude Code skills.
+Zero dependencies. Just install and use.
+
+## Frameworks
+
+| Skill | Creator | Use When |
+|-------|---------|----------|
+| `/wardley` | Simon Wardley | Strategic positioning, build-vs-buy, evolution analysis |
+| `/ooda` | John Boyd | Fast-changing situations, competitive response, crisis |
+| `/systems-thinking` | Peter Senge | Recurring problems, unintended consequences, feedback loops |
+| `/blue-ocean` | Kim & Mauborgne | Finding new markets, escaping price wars |
+| `/design-thinking` | Stanford d.school | Building products/services, customer experience |
+| `/first-principles` | Aristotle → Musk | Challenging assumptions, rebuilding from fundamentals |
+| `/porter` | Michael Porter | Industry analysis, competitive advantage, positioning |
+| `/drucker` | Peter Drucker | Goal-setting, organizational assessment, executive effectiveness |
+| `/bsc` | Kaplan & Norton | Strategic planning, KPIs, balanced performance management |
+
+## Installation
+
+Copy the skill directories into your Claude Code project:
+
+```bash
+# Copy all frameworks
+cp -r wardley ooda systems-thinking blue-ocean design-thinking \
+      first-principles porter drucker bsc \
+      /path/to/your/project/.claude/skills/
+
+# Or just the ones you need
+cp -r wardley porter /path/to/your/project/.claude/skills/
+```
+
+## Usage
+
+```
+/wardley          — Full Wardley Map session
+/porter:forces    — Five Forces industry analysis
+/drucker:5q       — Drucker's Five Essential Questions
+/ooda             — OODA Loop rapid decision analysis
+/blue-ocean:errc  — Eliminate/Reduce/Raise/Create grid
+/bsc:map          — Strategy Map across 4 perspectives
+```
+
+## Complementary Frameworks
+
+These pair well with:
+- **[TOC Agents](https://github.com/ironyjk/toc-agents)** — Theory of Constraints (Goldratt) — 11 tools for constraint analysis
+- **[TRIZ Agents](https://github.com/ironyjk/triz-agents)** — TRIZ (Altshuller) — 9 tools for inventive problem solving
+
+## The Full Toolkit
+
+```
+Diagnose  → TOC (find the constraint)
+Solve     → TRIZ (resolve contradictions)
+Position  → Wardley / Porter (strategic landscape)
+Innovate  → Blue Ocean / Design Thinking / First Principles
+Execute   → OODA (fast decisions) / Drucker MBO (objectives)
+Measure   → BSC (balanced KPIs)
+Understand → Systems Thinking (feedback loops)
+```
+
+## License
+
+MIT
+
+## Author
+
+@ironyjk × Claude Code
