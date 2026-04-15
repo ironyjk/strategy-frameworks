@@ -176,7 +176,7 @@ Plot your portfolio to assess future growth potential:
 **Healthy portfolio**: Shift weight toward Pioneers over time. If mostly Settlers, the company is vulnerable to disruption and margin erosion.
 
 ## Sub-commands
-- `/blue-ocean` — Full Blue Ocean analysis (includes Shift process)
+- `/think:blue-ocean` — Full Blue Ocean analysis (includes Shift process)
 - `/blue-ocean:canvas` — Draw a strategy canvas for your industry
 - `/blue-ocean:errc` — Four Actions Framework (Eliminate/Reduce/Raise/Create)
 - `/blue-ocean:paths` — Six Paths to find blue ocean opportunities

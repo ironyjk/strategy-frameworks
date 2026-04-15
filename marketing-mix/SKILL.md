@@ -404,7 +404,7 @@ Jerome McCarthy(1960)의 4P + Booms & Bitner(1981)의 서비스 확장 7P.
 
 ## Sub-Commands
 
-### `/marketing-mix` — Full 7P Analysis
+### `/think:marketing-mix` — Full 7P Analysis
 전체 7P 마케팅 믹스 분석. 서비스업 포함 모든 산업에 적용.
 
 **절차**:
@@ -415,7 +415,7 @@ Jerome McCarthy(1960)의 4P + Booms & Bitner(1981)의 서비스 확장 7P.
 5. 마케팅 믹스 일관성(coherence) 평가
 6. 핵심 권고사항 도출
 
-### `/marketing-mix:4p` — 4P Product-Focused Analysis
+### `/think:marketing-mix:4p` — 4P Product-Focused Analysis
 제품(유형재) 중심의 4P 분석. 제조업, 소비재, B2B 제품에 최적화.
 
 **초점**:
@@ -425,7 +425,7 @@ Jerome McCarthy(1960)의 4P + Booms & Bitner(1981)의 서비스 확장 7P.
 - 가격-품질 매트릭스 매핑
 - 유통 채널 효율성
 
-### `/marketing-mix:service` — Service-Specific 7P Analysis
+### `/think:marketing-mix:service` — Service-Specific 7P Analysis
 서비스업 특화 7P 분석. IHIP 특성(무형성, 이질성, 비분리성, 소멸성) 중심.
 
 **초점**:
@@ -435,7 +435,7 @@ Jerome McCarthy(1960)의 4P + Booms & Bitner(1981)의 서비스 확장 7P.
 - People/Process/Physical Evidence 심층 분석
 - 서비스 이익 사슬 평가
 
-### `/marketing-mix:audit` — Marketing Mix Audit
+### `/think:marketing-mix:audit` — Marketing Mix Audit
 현재 마케팅 믹스의 정합성(coherence)과 효과성을 감사.
 
 **감사 항목**:

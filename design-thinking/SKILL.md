@@ -167,7 +167,7 @@ Go/No-go criteria: [what must be true to proceed]
 ```
 
 ## Sub-commands
-- `/design-thinking` — Full 5-phase workshop
+- `/think:design-thinking` — Full 5-phase workshop
 - `/design-thinking:empathy` — Deep empathy mapping for a user group
 - `/design-thinking:hmw` — Generate "How Might We" questions from a problem
 - `/design-thinking:ideate` — Brainstorm session with SCAMPER and analogies

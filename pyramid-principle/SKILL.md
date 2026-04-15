@@ -219,7 +219,7 @@ Barbara Minto가 McKinsey에서 개발한 **구조적 사고 및 커뮤니케이
 
 ## 11. Sub-Commands (하위 명령)
 
-### `/pyramid-principle` — Structure Any Communication (커뮤니케이션 구조화)
+### `/think:pyramid-principle` — Structure Any Communication (커뮤니케이션 구조화)
 
 **입력**: 주제, 분석 결과, 또는 정리되지 않은 생각들
 **프로세스**:

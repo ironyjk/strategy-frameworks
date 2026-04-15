@@ -306,7 +306,7 @@ MVP는 **Build-Measure-Learn 루프를 최소 비용으로 한 바퀴 돌리기 
 
 ## 9. Output Format (출력 형식)
 
-### Full Analysis (`/lean-startup`)
+### Full Analysis (`/think:lean-startup`)
 
 ```
 🔬 Lean Startup Analysis: [사업/제품명]
@@ -408,7 +408,7 @@ MVP는 **Build-Measure-Learn 루프를 최소 비용으로 한 바퀴 돌리기 
 
 | Command | Description |
 |---------|-------------|
-| `/lean-startup` | Full Lean Startup analysis — 전체 분석 (가설, 실험, 회계, 캔버스) |
+| `/think:lean-startup` | Full Lean Startup analysis — 전체 분석 (가설, 실험, 회계, 캔버스) |
 | `/lean-startup:mvp` | Design an MVP — MVP 설계 (유형 선택, 성공 기준, 구축 계획) |
 | `/lean-startup:pivot` | Pivot-or-persevere decision — 피벗 의사결정 (성과 분석, 실험 리뷰, 권고) |
 

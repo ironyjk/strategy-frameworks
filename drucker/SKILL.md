@@ -142,7 +142,7 @@ Decisions: [what decisions are pending and how to approach them]
 ```
 
 ## Sub-commands
-- `/drucker` — Full Drucker assessment (5 Questions + MBO + Effectiveness)
+- `/think:drucker` — Full Drucker assessment (5 Questions + MBO + Effectiveness)
 - `/drucker:mbo` — Set up MBO cascade from mission to individual objectives
 - `/drucker:5q` — Five Essential Questions self-assessment
 - `/drucker:effective` — Effective Executive audit (time, contribution, strengths, priorities, decisions)

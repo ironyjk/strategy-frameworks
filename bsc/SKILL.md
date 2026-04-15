@@ -184,7 +184,7 @@ This makes strategy a **continual learning process**, not a one-time planning ex
 ```
 
 ## Sub-commands
-- `/bsc` — Full Balanced Scorecard design (strategy → map → measures → cascade)
+- `/think:bsc` — Full Balanced Scorecard design (strategy → map → measures → cascade)
 - `/bsc:map` — Strategy Map only (cause-and-effect across 4 perspectives)
 - `/bsc:kpi` — KPI design for a specific perspective or department
 - `/bsc:review` — Scorecard review session (traffic light status + adjustments)

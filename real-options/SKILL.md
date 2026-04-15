@@ -321,7 +321,7 @@ Embed real options in operational contracts:
 
 ## 7. Output Format (분석 결과 형식)
 
-### Full Analysis (`/real-options`)
+### Full Analysis (`/think:real-options`)
 
 ```
 🎯 투자 개요 (Investment Overview)
@@ -392,7 +392,7 @@ Scoring matrix for each option:
 
 | Command | Purpose | When to Use |
 |:---|:---|:---|
-| `/real-options` | Full real options analysis | Major investment decisions requiring comprehensive evaluation |
+| `/think:real-options` | Full real options analysis | Major investment decisions requiring comprehensive evaluation |
 | `/real-options:identify` | Identify embedded options | Early-stage exploration — what options exist in this situation? |
 | `/real-options:value` | Qualitative option valuation | When quantitative data is limited but option thinking is valuable |
 

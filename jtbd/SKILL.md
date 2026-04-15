@@ -240,7 +240,7 @@ Focus on a **specific** past purchase/hiring decision. Never ask hypotheticals.
 
 ## Sub-Commands
 
-### `/jtbd` — Full JTBD Analysis
+### `/think:jtbd` — Full JTBD Analysis
 Complete analysis covering all dimensions:
 1. Identify the core job(s)
 2. Map functional, emotional, and social dimensions
@@ -249,14 +249,14 @@ Complete analysis covering all dimensions:
 5. Map the competitive landscape through jobs lens
 6. Recommend strategic actions
 
-### `/jtbd:map` — Job Mapping
+### `/think:jtbd:map` — Job Mapping
 Focused on the 8-step universal job map:
 1. Walk through each step for the specified job
 2. Identify pain points and friction at each step
 3. Score opportunity at each step
 4. Recommend where to innovate
 
-### `/jtbd:forces` — Forces of Progress Analysis
+### `/think:jtbd:forces` — Forces of Progress Analysis
 Focused on the four forces diagram:
 1. Identify Push factors (current dissatisfaction)
 2. Identify Pull factors (new solution attraction)
@@ -265,7 +265,7 @@ Focused on the four forces diagram:
 5. Calculate force balance
 6. Recommend strategies to tip the balance
 
-### `/jtbd:switch` — Switching Analysis
+### `/think:jtbd:switch` — Switching Analysis
 Focused on the switch timeline:
 1. Map the customer's switching journey
 2. Identify trigger events
@@ -315,10 +315,10 @@ All JTBD analyses use the following structure with emoji headers:
 
 | Situation | JTBD Approach |
 |-----------|--------------|
-| New product/service design | Full `/jtbd` analysis |
-| Existing product improvement | `/jtbd:map` to find underserved steps |
-| Marketing message creation | `/jtbd:forces` to find Push/Pull language |
-| Competitive positioning | `/jtbd:switch` to understand switching triggers |
+| New product/service design | Full `/think:jtbd` analysis |
+| Existing product improvement | `/think:jtbd:map` to find underserved steps |
+| Marketing message creation | `/think:jtbd:forces` to find Push/Pull language |
+| Competitive positioning | `/think:jtbd:switch` to understand switching triggers |
 | Customer segmentation | Group by jobs, not demographics |
 | Pricing strategy | Price based on value of job done, not cost-plus |
 | Sales enablement | Understand hiring criteria at each timeline stage |

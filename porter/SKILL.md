@@ -195,7 +195,7 @@ See `references/five-forces-detail.md` for detailed analysis questions for each 
 See `references/industry-examples.md` for example Five Forces analyses across industries.
 
 ## Sub-commands
-- `/porter` — Full Porter analysis (Five Forces + Value Chain + Strategy + Diamond)
+- `/think:porter` — Full Porter analysis (Five Forces + Value Chain + Strategy + Diamond)
 - `/porter:forces` — Five Forces analysis only
 - `/porter:chain` — Value Chain analysis only
 - `/porter:strategy` — Generic strategy assessment and recommendation

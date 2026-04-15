@@ -279,6 +279,6 @@ Timeline: [short/medium/long-term phases]
 
 ## Sub-commands
 
-- `/ansoff-matrix` — Full growth strategy analysis using all four quadrants with risk assessment and recommended portfolio
-- `/ansoff-matrix:assess` — Assess the current growth strategy: which quadrant(s) is the company operating in, is the mix healthy, and what's missing?
-- `/ansoff-matrix:options` — Generate creative growth options across all four quadrants, ranked by risk-reward attractiveness
+- `/think:ansoff-matrix` — Full growth strategy analysis using all four quadrants with risk assessment and recommended portfolio
+- `/think:ansoff-matrix:assess` — Assess the current growth strategy: which quadrant(s) is the company operating in, is the mix healthy, and what's missing?
+- `/think:ansoff-matrix:options` — Generate creative growth options across all four quadrants, ranked by risk-reward attractiveness

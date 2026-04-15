@@ -328,7 +328,7 @@ OKR (분기 도전 목표)
 
 ## 🔧 서브 커맨드 (Sub-commands)
 
-### `/okr` — 전체 OKR 설계 (Full OKR Design)
+### `/think:okr` — 전체 OKR 설계 (Full OKR Design)
 
 전체 OKR 시스템을 설계한다.
 

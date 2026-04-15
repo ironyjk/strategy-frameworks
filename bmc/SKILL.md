@@ -13,7 +13,7 @@ tools: ["Read", "Write", "Edit", "Agent"]
 The Business Model Canvas (Osterwalder & Pigneur, 2010) is a strategic management tool for developing new or documenting existing business models. It describes how an organization creates, delivers, and captures value through 9 interconnected building blocks.
 
 **Sub-commands:**
-- `/bmc` — Full Business Model Canvas analysis
+- `/think:bmc` — Full Business Model Canvas analysis
 - `/bmc:vpc` — Value Proposition Canvas deep dive
 - `/bmc:pattern` — Identify or apply business model patterns
 
@@ -485,7 +485,7 @@ The BMC is a tool for **hypotheses**, not facts. Each block contains assumptions
 
 When generating a BMC analysis, use this structure:
 
-### `/bmc` — Full Canvas Output
+### `/think:bmc` — Full Canvas Output
 
 ```
 # 🎯 Business Model Canvas: [Company/Product Name]

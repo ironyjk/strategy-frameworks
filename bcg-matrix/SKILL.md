@@ -245,6 +245,6 @@ The BCG Matrix is fundamentally about **cash flow allocation**:
 ```
 
 ## Sub-commands
-- `/bcg-matrix` — Full portfolio analysis (map all units, cash flow dynamics, balance assessment, recommendations)
-- `/bcg-matrix:classify` — Classify a single business unit into the appropriate quadrant with rationale
-- `/bcg-matrix:balance` — Assess portfolio balance, identify gaps, and recommend rebalancing actions
+- `/think:bcg-matrix` — Full portfolio analysis (map all units, cash flow dynamics, balance assessment, recommendations)
+- `/think:bcg-matrix:classify` — Classify a single business unit into the appropriate quadrant with rationale
+- `/think:bcg-matrix:balance` — Assess portfolio balance, identify gaps, and recommend rebalancing actions

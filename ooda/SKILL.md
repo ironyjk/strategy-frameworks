@@ -219,7 +219,7 @@ By cycling faster:
 ```
 
 ## Sub-commands
-- `/ooda` — Full OODA analysis of a situation
+- `/think:ooda` — Full OODA analysis of a situation
 - `/ooda:orient` — Deep orientation analysis (Schwerpunkt + destruction/creation + implicit guidance audit)
 - `/ooda:tempo` — Competitive tempo analysis (who's looping faster and why?)
 

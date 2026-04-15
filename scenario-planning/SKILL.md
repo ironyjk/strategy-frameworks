@@ -330,7 +330,7 @@ For each scenario:
 
 ## Sub-Commands (하위 명령)
 
-### `/scenario-planning` — Full Process (전체 프로세스)
+### `/think:scenario-planning` — Full Process (전체 프로세스)
 
 Runs the complete 8-step scenario planning process. Requires:
 - A focal question or strategic decision
@@ -339,7 +339,7 @@ Runs the complete 8-step scenario planning process. Requires:
 
 Produces: Complete scenario planning report with all 8 steps.
 
-### `/scenario-planning:drivers` — Identify Driving Forces (동인 분석)
+### `/think:scenario-planning:drivers` — Identify Driving Forces (동인 분석)
 
 Focused sub-command for Step 2-3 only. Use when:
 - You need to brainstorm forces before committing to full analysis
@@ -348,7 +348,7 @@ Focused sub-command for Step 2-3 only. Use when:
 
 Produces: PESTEL-organized driving force list with uncertainty/impact matrix.
 
-### `/scenario-planning:test` — Wind-Tunnel a Strategy (전략 풍동 테스트)
+### `/think:scenario-planning:test` — Wind-Tunnel a Strategy (전략 풍동 테스트)
 
 Focused sub-command for Step 7 only. Use when:
 - You already have scenarios defined

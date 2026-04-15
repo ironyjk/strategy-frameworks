@@ -409,7 +409,7 @@ When analyzing a strategic interaction, structure the output as follows:
 
 ## 10. Sub-Commands
 
-### `/game-theory` — Full Strategic Interaction Analysis
+### `/think:game-theory` — Full Strategic Interaction Analysis
 Comprehensive game-theoretic analysis of a competitive situation:
 1. Identify the game type and all players
 2. Map strategies and payoffs

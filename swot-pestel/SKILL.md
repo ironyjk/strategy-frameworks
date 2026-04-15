@@ -314,7 +314,7 @@ WT (방어): [minimize weakness, avoid threat]
 ```
 
 ## Sub-commands
-- `/swot-pestel` — Full integrated analysis (PESTEL scan + SWOT matrix + TOWS strategies)
-- `/swot-pestel:swot` — SWOT analysis only (Strengths, Weaknesses, Opportunities, Threats + TOWS)
-- `/swot-pestel:pestel` — PESTEL macro-environment scan only (six factors with impact ratings)
-- `/swot-pestel:tows` — TOWS strategy matrix only (requires prior SWOT data or generates from context)
+- `/think:swot-pestel` — Full integrated analysis (PESTEL scan + SWOT matrix + TOWS strategies)
+- `/think:swot-pestel:swot` — SWOT analysis only (Strengths, Weaknesses, Opportunities, Threats + TOWS)
+- `/think:swot-pestel:pestel` — PESTEL macro-environment scan only (six factors with impact ratings)
+- `/think:swot-pestel:tows` — TOWS strategy matrix only (requires prior SWOT data or generates from context)

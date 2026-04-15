@@ -14,9 +14,9 @@ tools: ["Read", "Write", "Edit", "Agent"]
 
 | Command | Purpose |
 |---------|---------|
-| `/disruptive-innovation` | Full disruption analysis — theory, trajectories, RPV, JTBD, response strategy |
-| `/disruptive-innovation:test` | Disruption Litmus Test — evaluate whether a threat is truly disruptive |
-| `/disruptive-innovation:respond` | Incumbent Response Strategy — what to do when disruption is confirmed |
+| `/think:disruptive-innovation` | Full disruption analysis — theory, trajectories, RPV, JTBD, response strategy |
+| `/think:disruptive-innovation:test` | Disruption Litmus Test — evaluate whether a threat is truly disruptive |
+| `/think:disruptive-innovation:respond` | Incumbent Response Strategy — what to do when disruption is confirmed |
 
 ---
 
@@ -421,7 +421,7 @@ Ask these questions for any disruption response:
 
 When applying this framework, structure the output as follows:
 
-### `/disruptive-innovation` (Full Analysis)
+### `/think:disruptive-innovation` (Full Analysis)
 
 ```
 🔬 파괴적 혁신 분석: [Subject]
@@ -460,7 +460,7 @@ When applying this framework, structure the output as follows:
 [How quickly is the disruption progressing? When does it cross "good enough"?]
 ```
 
-### `/disruptive-innovation:test` (Disruption Litmus Test Only)
+### `/think:disruptive-innovation:test` (Disruption Litmus Test Only)
 
 ```
 ✅ 파괴적 혁신 판별 검증
@@ -484,7 +484,7 @@ When applying this framework, structure the output as follows:
 권장 조치: [Next step]
 ```
 
-### `/disruptive-innovation:respond` (Incumbent Response Strategy Only)
+### `/think:disruptive-innovation:respond` (Incumbent Response Strategy Only)
 
 ```
 🛡️ 기존 기업 대응 전략

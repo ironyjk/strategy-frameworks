@@ -433,7 +433,7 @@ When applying this framework, use the following structure:
 
 ## Sub-Commands
 
-### `/kotter` — Full 8-Step Change Plan
+### `/think:kotter` — Full 8-Step Change Plan
 Generate a comprehensive 8-step change plan for a given initiative.
 
 **Input:** Description of the change initiative, organization context, current state

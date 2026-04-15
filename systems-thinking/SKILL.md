@@ -199,7 +199,7 @@ Key delays: [where time lags exist]
 ```
 
 ## Sub-commands
-- `/systems-thinking` — Full systems analysis (story → CLD → stock-flow → archetype → leverage)
+- `/think:systems-thinking` — Full systems analysis (story → CLD → stock-flow → archetype → leverage)
 - `/systems-thinking:cld` — Just draw a Causal Loop Diagram
 - `/systems-thinking:stock-flow` — Stock and Flow analysis of a system
 - `/systems-thinking:archetype` — Identify which system archetype is at play

@@ -111,6 +111,6 @@ Gap: [opportunity size]
 ```
 
 ## Sub-commands
-- `/first-principles` — Full analysis: assumptions → truths → reconstruct
+- `/think:first-principles` — Full analysis: assumptions → truths → reconstruct
 - `/first-principles:assumptions` — Just list and challenge assumptions
 - `/first-principles:reconstruct` — Given fundamentals, rebuild from scratch

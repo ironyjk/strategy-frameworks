@@ -199,7 +199,7 @@ Analysis output uses the following structure with emoji headers:
 
 ## 9. Sub-Commands
 
-### `/rbv` — Full Resource Analysis (전체 자원 분석)
+### `/think:rbv` — Full Resource Analysis (전체 자원 분석)
 Complete resource-based analysis: identify → classify → VRIO → core competence → dynamic capabilities → strategic implications.
 
 ### `/rbv:vrio` — VRIO Assessment (VRIO 평가)

@@ -330,7 +330,7 @@ When performing STP analysis, structure the output as follows:
 
 ## Sub-commands
 
-### `/stp` — Full STP Analysis
+### `/think:stp` — Full STP Analysis
 Runs the complete Segmentation → Targeting → Positioning pipeline.
 
 **Input needed:**
@@ -339,7 +339,7 @@ Runs the complete Segmentation → Targeting → Positioning pipeline.
 - Key competitors
 - Available data (market research, customer data, financials)
 
-### `/stp:segment` — Segmentation Analysis Only
+### `/think:stp:segment` — Segmentation Analysis Only
 Deep-dive into market segmentation. Produces detailed segment profiles without targeting or positioning decisions.
 
 **Useful when:**
@@ -347,7 +347,7 @@ Deep-dive into market segmentation. Produces detailed segment profiles without t
 - Existing segmentation feels outdated
 - Need to discover unserved segments
 
-### `/stp:position` — Positioning Strategy Only
+### `/think:stp:position` — Positioning Strategy Only
 Develops positioning strategy for an already-defined target segment.
 
 **Input needed:**

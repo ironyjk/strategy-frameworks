@@ -57,7 +57,7 @@ Strategic Moves:
 ```
 
 ## Sub-commands
-- `/wardley` — Full mapping session from user needs to strategic moves
+- `/think:wardley` — Full mapping session from user needs to strategic moves
 - `/wardley:map` — Quick map: just plot components on evolution axis
 - `/wardley:play` — Given an existing map, identify strategic plays
 

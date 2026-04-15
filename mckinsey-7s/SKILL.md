@@ -367,6 +367,6 @@ Timeline: [estimated duration for meaningful alignment]
 
 ## Sub-commands
 
-- `/mckinsey-7s` — Full 7S analysis (all 7 elements + alignment matrix + recommendations)
-- `/mckinsey-7s:align` — Alignment gap analysis only (21-pair assessment, misalignment patterns, prioritized fixes)
-- `/mckinsey-7s:change` — Change readiness assessment (current vs. target state per element, gap sizing, sequencing plan, risk factors)
+- `/think:mckinsey-7s` — Full 7S analysis (all 7 elements + alignment matrix + recommendations)
+- `/think:mckinsey-7s:align` — Alignment gap analysis only (21-pair assessment, misalignment patterns, prioritized fixes)
+- `/think:mckinsey-7s:change` — Change readiness assessment (current vs. target state per element, gap sizing, sequencing plan, risk factors)
