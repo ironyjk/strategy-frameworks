@@ -1,12 +1,14 @@
 ---
 name: think
-version: "1.1.0"
-description: "Strategic Thinking Agent — automatically selects the best framework(s) from 29 tools (TOC/TRIZ/Wardley/OODA/Systems Thinking/Blue Ocean/Design Thinking/First Principles/Porter/Drucker/BSC) to solve any business problem. Just describe your problem."
+version: "2.0.0"
+description: "Strategic Thinking Agent — automatically selects the best framework(s) from 45 tools (TOC/TRIZ/Wardley/OODA/Systems Thinking/Blue Ocean/Design Thinking/First Principles/Porter/Drucker/BSC + 16 MBA frameworks) to solve any business problem. Just describe your problem."
 tools: ["Read", "Write", "Edit", "Agent", "Skill"]
 install: |
-  # Install all dependencies (29 framework tools):
-  # 1. This repo's 9 frameworks
+  # Install all dependencies (45 framework tools):
+  # 1. This repo's 25 frameworks (9 original + 16 MBA)
   cp -r wardley ooda systems-thinking blue-ocean design-thinking first-principles porter drucker bsc .claude/skills/
+  cp -r bcg-matrix mckinsey-7s swot-pestel ansoff-matrix disruptive-innovation scenario-planning .claude/skills/
+  cp -r stp marketing-mix jtbd bmc kotter okr lean-startup real-options game-theory pyramid-principle rbv .claude/skills/
   # 2. TOC (11 tools) — https://github.com/ironyjk/toc-agents
   git clone https://github.com/ironyjk/toc-agents.git /tmp/toc-agents && cp -r /tmp/toc-agents/.claude/skills/toc .claude/skills/
   # 3. TRIZ (9 tools) — https://github.com/ironyjk/triz-agents
@@ -20,7 +22,7 @@ dependencies:
     skills: [triz, triz:ifr, triz:contradiction, triz:matrix, triz:40p, triz:ariz, triz:sufield, triz:resources, triz:trimming, triz:evolution]
   - name: strategy-frameworks
     url: https://github.com/ironyjk/strategy-frameworks
-    skills: [wardley, ooda, systems-thinking, blue-ocean, design-thinking, first-principles, porter, drucker, bsc]
+    skills: [wardley, ooda, systems-thinking, blue-ocean, design-thinking, first-principles, porter, drucker, bsc, bcg-matrix, mckinsey-7s, swot-pestel, ansoff-matrix, disruptive-innovation, scenario-planning, stp, marketing-mix, jtbd, bmc, kotter, okr, lean-startup, real-options, game-theory, pyramid-principle, rbv]
 ---
 
 # Strategic Thinking Agent — 29 Tools, One Entry Point
@@ -64,18 +66,40 @@ Analyze the user's problem and match it to one or more categories:
 | "measure performance", "balanced view", "strategy execution" | **BSC** | Drucker: MBO |
 | "mission", "purpose", "who is our customer" | **Drucker: 5Q** | Design Thinking |
 | "effectiveness", "time management", "priorities" | **Drucker: Effective** | TOC: Five Steps |
+| "portfolio", "which business to invest", "star vs dog", "resource allocation" | **BCG Matrix** | Ansoff Matrix |
+| "organization not aligned", "culture problem", "merger integration", "restructuring" | **McKinsey 7S** | Kotter |
+| "strengths", "weaknesses", "opportunities", "threats", "external environment" | **SWOT-PESTEL** | Porter: Forces |
+| "how to grow", "new market or new product", "diversification", "expansion" | **Ansoff Matrix** | Blue Ocean |
+| "disruption", "startup threat", "incumbent at risk", "technology shift" | **Disruptive Innovation** | Scenario Planning |
+| "uncertain future", "multiple scenarios", "what if", "black swan", "geopolitics" | **Scenario Planning** | Real Options |
+| "who is our target customer", "segmentation", "positioning", "brand perception" | **STP** | Marketing Mix |
+| "marketing plan", "pricing", "distribution", "promotion", "4P", "7P" | **Marketing Mix** | STP |
+| "why do customers buy", "customer motivation", "switching behavior", "hire a product" | **JTBD** | Design Thinking |
+| "business model", "revenue model", "value proposition", "canvas" | **BMC** | Lean Startup |
+| "change management", "people resist change", "transformation", "adoption" | **Kotter** | McKinsey 7S |
+| "OKR", "goal setting", "alignment", "key results", "quarterly goals" | **OKR** | Drucker: MBO |
+| "MVP", "validate idea", "startup", "pivot", "experiment", "hypothesis" | **Lean Startup** | BMC |
+| "invest or wait", "option value", "staged investment", "defer decision" | **Real Options** | TOC: Throughput |
+| "competitor reaction", "price war", "strategic interaction", "game", "bluff" | **Game Theory** | Porter: Forces |
+| "present findings", "structure communication", "executive summary", "report" | **Pyramid Principle** | Storytelling |
+| "what is our advantage", "unique resource", "VRIO", "core competence", "capability" | **RBV** | Porter: Strategy |
 
 ### Multi-Framework Combinations (for complex problems)
 
 | Problem Type | Recommended Pipeline |
 |---|---|
 | **"Fix a broken business"** | TOC:CRT (diagnose) → TOC:EC (resolve conflict) → TOC:FRT (validate) → TOC:TT (execute) |
-| **"Enter a new market"** | Porter:Forces (analyze industry) → Blue Ocean:ERRC (find space) → Wardley (position) → BSC (measure) |
-| **"Innovate a product"** | Design Thinking:Empathy (understand user) → TRIZ:Contradiction (solve technical) → First Principles (challenge cost) |
-| **"Respond to competitor threat"** | OODA (fast assessment) → Porter:Forces (industry dynamics) → TOC:Five Steps (find our constraint) |
-| **"Strategic planning"** | Drucker:5Q (mission) → Wardley:Map (landscape) → BSC (scorecard) → Drucker:MBO (cascade objectives) |
+| **"Enter a new market"** | SWOT-PESTEL (scan) → Porter:Forces (analyze industry) → STP (target) → Blue Ocean:ERRC (find space) → BMC (model) |
+| **"Innovate a product"** | JTBD (understand job) → Design Thinking:Empathy (deep insight) → TRIZ:Contradiction (solve technical) → Lean Startup:MVP (validate) |
+| **"Respond to competitor threat"** | OODA (fast assessment) → Game Theory (predict moves) → Porter:Forces (industry dynamics) → RBV (our advantages) |
+| **"Strategic planning"** | SWOT-PESTEL (environment) → Drucker:5Q (mission) → Wardley:Map (landscape) → BCG Matrix (portfolio) → BSC (scorecard) → OKR (cascade) |
 | **"Improve operations"** | TOC:Five Steps (find bottleneck) → Systems Thinking:CLD (feedback loops) → TOC:DBR (schedule around constraint) |
 | **"Something feels wrong but can't pinpoint"** | Systems Thinking:Archetype (pattern) → TOC:CRT (root cause) → TOC:EC (core conflict) |
+| **"Launch new business/service"** | BMC (design model) → STP (segment & position) → Marketing Mix (4P/7P tactics) → Lean Startup (validate with MVP) |
+| **"Growth strategy"** | Ansoff Matrix (growth options) → Scenario Planning (test futures) → Real Options (stage investments) → OKR (execute) |
+| **"Organization transformation"** | McKinsey 7S (diagnose alignment) → Kotter (8-step change) → OKR (measure progress) → Pyramid Principle (communicate) |
+| **"Investment under uncertainty"** | Scenario Planning (map futures) → Real Options (value flexibility) → Game Theory (competitor dynamics) → TOC:Throughput (ROI) |
+| **"Communicate strategy to board"** | Pyramid Principle (structure) → BCG Matrix (portfolio visual) → BSC (metrics) → Scenario Planning (risk narrative) |
 
 ## Execution Protocol
 
