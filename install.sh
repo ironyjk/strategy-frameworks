@@ -1,6 +1,6 @@
 #!/bin/bash
-# /think — One-command installer for all 30 strategy tools
-# Installs: Strategy Frameworks (9+think) + TOC (11) + TRIZ (9)
+# /think — One-command installer for all 46 strategy tools
+# Installs: Strategy Frameworks (26+think) + TOC (11) + TRIZ (9)
 #
 # Usage:
 #   curl -fsSL https://raw.githubusercontent.com/ironyjk/strategy-frameworks/master/install.sh | bash
@@ -38,7 +38,7 @@ fi
 TEMP_DIR=$(mktemp -d)
 
 echo ""
-echo "  🧠 /think installer — 30 strategy tools"
+echo "  🧠 /think installer — 46 strategy tools"
 echo "  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 if [ "$GLOBAL" = true ]; then
     echo "  Mode: global (~/.claude/skills)"
@@ -90,7 +90,7 @@ install_repo() {
 }
 
 # Install all three repos
-install_repo "strategy-frameworks" "Strategy Frameworks" 10 wardley ooda systems-thinking blue-ocean design-thinking first-principles porter drucker bsc think
+install_repo "strategy-frameworks" "Strategy Frameworks" 27 wardley ooda systems-thinking blue-ocean design-thinking first-principles porter drucker bsc bcg-matrix mckinsey-7s swot-pestel ansoff-matrix disruptive-innovation scenario-planning stp marketing-mix jtbd bmc kotter okr lean-startup real-options game-theory pyramid-principle rbv think
 install_repo "toc-agents" "TOC Agents" 11 toc
 install_repo "triz-agents" "TRIZ Agents" 9 triz
 

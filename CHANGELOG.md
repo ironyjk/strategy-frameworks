@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.0] — 2026-04-15
+
+### Added
+- **17 new MBA/strategy frameworks**: bcg-matrix, mckinsey-7s, swot-pestel, ansoff-matrix, disruptive-innovation, scenario-planning, stp, marketing-mix, jtbd, bmc, kotter, okr, lean-startup, real-options, game-theory, pyramid-principle, rbv
+- New categories: Market (STP, Marketing Mix), Communicate (Pyramid Principle)
+- Total tools: 46 (26 strategy + TOC 11 + TRIZ 9)
+
+### Changed
+- **/think v2.0**: updated meta-router to support all 26 strategy frameworks
+- install.sh, update.sh, update.bat: include all 17 new framework directories
+- README.md, README.ko.md: updated framework lists, counts, architecture diagrams
+
 ## [1.1.0] — 2026-04-14
 
 ### Added

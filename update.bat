@@ -22,7 +22,7 @@ REM 1. Strategy Frameworks
 echo    Updating strategy-frameworks...
 git clone --depth 1 --quiet https://github.com/ironyjk/strategy-frameworks.git "%TEMP%\sf" 2>nul
 if %errorlevel%==0 (
-    for %%d in (wardley ooda systems-thinking blue-ocean design-thinking first-principles porter drucker bsc think) do (
+    for %%d in (wardley ooda systems-thinking blue-ocean design-thinking first-principles porter drucker bsc bcg-matrix mckinsey-7s swot-pestel ansoff-matrix disruptive-innovation scenario-planning stp marketing-mix jtbd bmc kotter okr lean-startup real-options game-theory pyramid-principle rbv think) do (
         if exist "%TEMP%\sf\%%d" (
             xcopy /s /y /q "%TEMP%\sf\%%d\*" "%TARGET%\%%d\" >nul 2>&1
         )
@@ -64,7 +64,7 @@ rmdir /s /q "%TEMP%" 2>nul
 
 echo.
 echo  %UPDATED%/3 repos updated
-echo  30 tools ready in %TARGET%\
+echo  46 tools ready in %TARGET%\
 echo  Run: /think [your problem]
 echo.
 

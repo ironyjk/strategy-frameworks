@@ -1,9 +1,9 @@
 # Strategy Frameworks for Claude Code
 
-29 strategy and management frameworks, 4 entry points.
+46 strategy and management frameworks, 4 entry points.
 Describe your problem — AI picks the best tool(s) and runs them.
 
-## `/think` — One Command, 29 Tools
+## `/think` — One Command, 46 Tools
 
 ```
 /think Our competitor is stealing key accounts with aggressive pricing. How should we respond?
@@ -54,7 +54,7 @@ The AI automatically:
 | `/triz:trimming` | Simplify by removing components |
 | `/triz:evolution` | Predict next-generation designs |
 
-## All 29 Frameworks
+## All 46 Frameworks
 
 ### Diagnose — What's the problem?
 
@@ -62,6 +62,8 @@ The AI automatically:
 |-----------|---------|----------|
 | **TOC** (10 tools) | Goldratt | Bottlenecks, root causes, conflicts, execution plans |
 | **Systems Thinking** | Peter Senge | Feedback loops, system archetypes, recurring problems |
+| **SWOT + PESTEL** | Various | Internal strengths/weaknesses + macro-environment scanning |
+| **McKinsey 7S** | Peters & Waterman | Organizational alignment, change management, M&A |
 
 ### Solve — How to fix it?
 
@@ -69,6 +71,8 @@ The AI automatically:
 |-----------|---------|----------|
 | **TRIZ** (9 tools) | Altshuller | Technical contradictions, inventive principles |
 | **First Principles** | Aristotle → Musk | Challenge assumptions, rebuild from fundamentals |
+| **Game Theory** | Nash, von Neumann | Competitive interactions, rival behavior prediction |
+| **Real Options** | Myers | Investment under uncertainty, flexibility valuation |
 
 ### Position — Where to compete?
 
@@ -77,12 +81,27 @@ The AI automatically:
 | **Wardley Mapping** | Simon Wardley | Value chain mapping, strategic positioning |
 | **Porter** | Michael Porter | Industry analysis, competitive advantage |
 | **Blue Ocean** | Kim & Mauborgne | Create uncontested market space |
+| **BCG Matrix** | BCG | Portfolio management, resource allocation |
+| **Ansoff Matrix** | Igor Ansoff | Growth strategy, market/product expansion |
+| **RBV** | Barney & Wernerfelt | Internal resources, VRIO, sustainable advantage |
+| **Scenario Planning** | Shell/Schwartz | Strategic foresight, multiple plausible futures |
+| **Disruptive Innovation** | Christensen | Predict/respond to market disruption |
 
 ### Innovate — What to build?
 
 | Framework | Creator | Use When |
 |-----------|---------|----------|
 | **Design Thinking** | Stanford d.school | Customer-centered innovation, prototyping |
+| **JTBD** | Christensen/Ulwick | Understand why customers "hire" products |
+| **Lean Startup** | Eric Ries | Build-Measure-Learn, MVP, validated learning |
+| **BMC** | Osterwalder | Business model design, 9 building blocks |
+
+### Market — How to reach customers?
+
+| Framework | Creator | Use When |
+|-----------|---------|----------|
+| **STP** | Kotler | Segmentation, targeting, positioning |
+| **Marketing Mix 4P/7P** | McCarthy | Product, price, place, promotion tactics |
 
 ### Execute — How to do it?
 
@@ -90,6 +109,8 @@ The AI automatically:
 |-----------|---------|----------|
 | **OODA Loop** | John Boyd | Fast decisions, competitive response, crisis |
 | **Drucker** | Peter Drucker | MBO, executive effectiveness, innovation |
+| **Kotter** | John Kotter | 8-step organizational change management |
+| **OKR** | Intel/Google | Goal-setting, alignment, measurable key results |
 
 ### Measure — Is it working?
 
@@ -97,25 +118,35 @@ The AI automatically:
 |-----------|---------|----------|
 | **BSC** | Kaplan & Norton | Balanced Scorecard, KPIs, strategy execution |
 
+### Communicate — How to present it?
+
+| Framework | Creator | Use When |
+|-----------|---------|----------|
+| **Pyramid Principle** | Barbara Minto | Top-down structured communication, executive writing |
+
 ## Architecture
 
 ```
 /think (meta-router — user-invocable)
-├── 9 Strategy Frameworks (internal, auto-selected by /think)
+├── 26 Strategy Frameworks (internal, auto-selected by /think)
 │   ├── wardley, ooda, systems-thinking
 │   ├── blue-ocean, design-thinking, first-principles
-│   └── porter, drucker, bsc
+│   ├── porter, drucker, bsc
+│   ├── bcg-matrix, mckinsey-7s, swot-pestel, ansoff-matrix
+│   ├── disruptive-innovation, scenario-planning, stp, marketing-mix
+│   ├── jtbd, bmc, kotter, okr, lean-startup
+│   └── real-options, game-theory, pyramid-principle, rbv
 ├── /toc (user-invocable + 10 sub-commands)
 │   └── crt, ec, frt, tt, prt, five-steps, dbr, ccpm, throughput, buy-in
 └── /triz (user-invocable + 9 sub-commands)
     └── contradiction, matrix, 40p, ifr, ariz, sufield, resources, trimming, evolution
 ```
 
-The 9 strategy frameworks have `user-invocable: false` — they don't appear in the slash menu but are called internally by `/think` via the Skill tool. TOC and TRIZ remain directly accessible because power users often need specific tools.
+The 26 strategy frameworks have `user-invocable: false` — they don't appear in the slash menu but are called internally by `/think` via the Skill tool. TOC and TRIZ remain directly accessible because power users often need specific tools.
 
 ## Installation
 
-### One-Line Install (all 29 tools)
+### One-Line Install (all 46 tools)
 
 ```bash
 cd /path/to/your/project
@@ -127,9 +158,9 @@ Or manually:
 ```bash
 cd /path/to/your/project
 
-# 1. Strategy Frameworks (9 + think agent)
+# 1. Strategy Frameworks (26 + think agent)
 git clone https://github.com/ironyjk/strategy-frameworks.git /tmp/sf
-cp -r /tmp/sf/{wardley,ooda,systems-thinking,blue-ocean,design-thinking,first-principles,porter,drucker,bsc,think} .claude/skills/
+cp -r /tmp/sf/{wardley,ooda,systems-thinking,blue-ocean,design-thinking,first-principles,porter,drucker,bsc,bcg-matrix,mckinsey-7s,swot-pestel,ansoff-matrix,disruptive-innovation,scenario-planning,stp,marketing-mix,jtbd,bmc,kotter,okr,lean-startup,real-options,game-theory,pyramid-principle,rbv,think} .claude/skills/
 
 # 2. TOC Agents (10 sub-tools)
 git clone https://github.com/ironyjk/toc-agents.git /tmp/toc
@@ -179,7 +210,7 @@ The `&` runs in the background without blocking session start. Checks once per 2
 cp -r wardley porter .claude/skills/
 ```
 
-> `/think` requires all 29 tools for full auto-routing.
+> `/think` requires all 46 tools for full auto-routing.
 
 ### Other Platforms
 

@@ -51,8 +51,8 @@ update_repo() {
     fi
 }
 
-# 1. Strategy Frameworks (9 + think)
-update_repo "strategy-frameworks" "Strategy Frameworks" "wardley ooda systems-thinking blue-ocean design-thinking first-principles porter drucker bsc think"
+# 1. Strategy Frameworks (26 + think)
+update_repo "strategy-frameworks" "Strategy Frameworks" "wardley ooda systems-thinking blue-ocean design-thinking first-principles porter drucker bsc bcg-matrix mckinsey-7s swot-pestel ansoff-matrix disruptive-innovation scenario-planning stp marketing-mix jtbd bmc kotter okr lean-startup real-options game-theory pyramid-principle rbv think"
 
 # 2. TOC Agents (11)
 update_repo "toc-agents" "TOC Agents" "toc"
@@ -66,6 +66,6 @@ rm -rf "$TEMP_DIR"
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e "   ${GREEN}✓ $UPDATED/3 repos updated${NC}"
-echo "   30 tools ready in $TARGET/"
+echo "   46 tools ready in $TARGET/"
 echo "   Run: /think [your problem]"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━"
