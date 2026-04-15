@@ -106,7 +106,7 @@ Cross-match SWOT elements to generate actionable strategies:
 │             │                 │  opportunities   │
 ├─────────────┼─────────────────┼─────────────────┤
 │ Threats     │  ST Strategies  │  WT Strategies   │
-│ (위협)       │  (다각화 전략)   │  (방어 전략)      │
+│ (위협)       │  (대응 전략)     │  (방어 전략)      │
 │             │  Use strengths  │  Minimize weak-  │
 │             │  to counter     │  nesses and      │
 │             │  threats        │  avoid threats   │
@@ -124,10 +124,10 @@ Cross-match SWOT elements to generate actionable strategies:
 - "What weakness must we fix to capture opportunity Y?"
 - Often requires investment, training, partnerships, or acquisition
 
-### ST Strategies (다각화 전략 — Maxi-Mini)
+### ST Strategies (대응 전략 — Maxi-Mini)
 - Defensive leverage: use strengths to deflect threats
 - "How can strength X protect us from threat Z?"
-- Diversification, hedging, competitive positioning
+- Hedging, competitive positioning, preemptive moves
 
 ### WT Strategies (방어 전략 — Mini-Mini)
 - Damage control: minimize weaknesses and avoid threats
@@ -303,7 +303,7 @@ Strengths (강점):
 🎯 TOWS Strategies
 SO (공격): [deploy strength to seize opportunity]
 WO (만회): [fix weakness to capture opportunity]
-ST (다각화): [use strength to counter threat]
+ST (대응): [use strength to counter threat]
 WT (방어): [minimize weakness, avoid threat]
 
 📋 Priority Actions

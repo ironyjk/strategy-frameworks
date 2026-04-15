@@ -164,7 +164,7 @@ Risk ▲
      │  New products × New markets    ★★★ Highest risk + reward
      │
   3  │  ██████████████████████        PRODUCT DEVELOPMENT (제품개발)
-     │  New products × Existing mkts  ★★ Medium-high risk
+     │  New products × Existing mkts  ★★ Medium risk
      │
   2  │  ██████████████████████        MARKET DEVELOPMENT (시장개발)
      │  Existing products × New mkts  ★★ Medium risk

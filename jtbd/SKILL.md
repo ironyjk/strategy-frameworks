@@ -153,10 +153,10 @@ Understanding how customers switch from one solution to another. The timeline fr
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                                                     │
                                                     ▼
-                                      ┌─────────────────────┐
-                                      │  Consuming    Satisfaction  │
-                                      │  (사용)       (만족/불만족) │
-                                      └─────────────────────┘
+                                      ┌───────────────────────────────┐
+                                      │  Consuming    Satisfaction    │
+                                      │  (사용)       (만족/불만족)   │
+                                      └───────────────────────────────┘
 ```
 
 | Phase | Description | Interview Questions |

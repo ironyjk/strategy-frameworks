@@ -388,10 +388,10 @@ Rate each item 1 (strongly disagree) to 5 (strongly agree):
 - [ ] Early wins are being generated and celebrated
 - [ ] There is a plan to prevent regression to old behaviors
 
-**Scoring:**
-- **24-30 per section**: Strong readiness — proceed with confidence
-- **18-23 per section**: Moderate readiness — address gaps before proceeding
-- **Below 18 per section**: Low readiness — significant groundwork needed
+**Scoring** (4 items per section, each 1-5, max 20):
+- **17-20 per section**: Strong readiness — proceed with confidence
+- **12-16 per section**: Moderate readiness — address gaps before proceeding
+- **Below 12 per section**: Low readiness — significant groundwork needed
 
 ---
 

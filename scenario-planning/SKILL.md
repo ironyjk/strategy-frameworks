@@ -20,7 +20,7 @@ tools: ["Read", "Write", "Edit", "Agent"]
 
 When OPEC's 1973 embargo hit, Shell was the only major oil company that had already rehearsed this future mentally. They responded faster, repositioned assets earlier, and within two decades rose from last to first or second in profitability among the majors. They repeated this advantage during the 1979 oil crisis.
 
-**The key insight**: Scenario planning does not predict the future. It **prepares the mind** to recognize and respond to multiple futures. Peter Schwartz (who led Shell's scenario team) called this "the gentle art of re-perceiving" — breaking mental models so that when change arrives, it feels like "memories of the future" rather than shock.
+**The key insight**: Scenario planning does not predict the future. It **prepares the mind** to recognize and respond to multiple futures. Peter Schwartz (who later headed Shell's scenario planning group, succeeding Wack) called this "the gentle art of re-perceiving" — breaking mental models so that when change arrives, it feels like "memories of the future" rather than shock.
 
 **When to use scenario planning (시나리오 플래닝 적용 시점)**:
 - Strategic decisions with long time horizons (3-10+ years)

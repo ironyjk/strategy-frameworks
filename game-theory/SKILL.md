@@ -226,7 +226,7 @@ Fight    Accommodate
 
 When players interact repeatedly, cooperation can emerge even without binding contracts.
 
-**Folk Theorem**: In infinitely repeated games (or games with uncertain end), virtually any outcome that gives each player more than their worst-case payoff can be sustained as a Nash Equilibrium.
+**Folk Theorem**: In infinitely repeated games (or games with uncertain end), virtually any outcome that gives each player more than their minmax payoff (the worst they can guarantee themselves) can be sustained as a Nash Equilibrium, provided the discount factor is sufficiently high (players value the future enough).
 
 ### Key Strategies
 
@@ -260,23 +260,21 @@ A threat is credible only if carrying it out is in the threatener's interest whe
 Not all interactions are zero-sum. **Co-opetition** = simultaneous cooperation and competition.
 
 ```
-                 ┌──────────────┐
-                 │  Customers   │
-                 │   (고객)      │
-                 └──────┬───────┘
-                        │
-    ┌──────────────┐    │    ┌──────────────┐
-    │ Complementors │────┼────│  Competitors  │
-    │   (보완자)     │    │    │    (경쟁자)    │
-    └──────────────┘    │    └──────────────┘
-                        │
-                 ┌──────┴───────┐
-                 │  Suppliers   │
-                 │   (공급자)    │
-                 └──────────────┘
-                        │
-                   YOUR COMPANY
-                    (자사)
+                  ┌──────────────┐
+                  │  Customers   │
+                  │   (고객)      │
+                  └──────┬───────┘
+                         │
+  ┌──────────────┐ ┌─────┴─────┐ ┌──────────────┐
+  │ Complementors├─┤   YOUR    ├─┤  Competitors  │
+  │   (보완자)    │ │  COMPANY  │ │   (경쟁자)    │
+  └──────────────┘ │  (자사)   │ └──────────────┘
+                   └─────┬─────┘
+                         │
+                  ┌──────┴───────┐
+                  │  Suppliers   │
+                  │   (공급자)    │
+                  └──────────────┘
 ```
 
 ### The PARTS Framework

@@ -423,7 +423,7 @@ Three stages of fit:
 ### Additional Patterns:
 - **Open Business Model (개방형)** — systematically collaborate with outside partners (P&G Connect+Develop)
 - **Unbundling (분리형)** — separate infrastructure, product innovation, customer relationship businesses
-- **Bait & Hook (미끼와 낚시)** — attractive initial offer locks customers into repeat purchases
+- **Bait & Hook (미끼와 낚시)** — subsidized or free initial offer + ongoing revenue through contracts or services (differs from Razor-and-Blade: lock-in is contractual, not consumable-based; e.g., subsidized phones + carrier contracts)
 
 ---
 
