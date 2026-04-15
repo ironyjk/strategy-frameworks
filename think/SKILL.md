@@ -1,17 +1,17 @@
 ---
 name: think
 version: "2.0.0"
-description: "Strategic Thinking Agent — automatically selects the best framework(s) from 45 tools (TOC/TRIZ/Wardley/OODA/Systems Thinking/Blue Ocean/Design Thinking/First Principles/Porter/Drucker/BSC + 16 MBA frameworks) to solve any business problem. Just describe your problem."
+description: "Strategic Thinking Agent — automatically selects the best framework(s) from 47 tools (TOC/TRIZ/Wardley/OODA/Systems Thinking/Blue Ocean/Design Thinking/First Principles/Porter/Drucker/BSC + 17 MBA frameworks) to solve any business problem. Just describe your problem."
 tools: ["Read", "Write", "Edit", "Agent", "Skill"]
 install: |
-  # Install all dependencies (45 framework tools):
-  # 1. This repo's 25 frameworks (9 original + 16 MBA)
+  # Install all dependencies (47 framework tools):
+  # 1. This repo's 26 frameworks (9 original + 17 MBA)
   cp -r wardley ooda systems-thinking blue-ocean design-thinking first-principles porter drucker bsc .claude/skills/
   cp -r bcg-matrix mckinsey-7s swot-pestel ansoff-matrix disruptive-innovation scenario-planning .claude/skills/
   cp -r stp marketing-mix jtbd bmc kotter okr lean-startup real-options game-theory pyramid-principle rbv .claude/skills/
   # 2. TOC (11 tools) — https://github.com/ironyjk/toc-agents
   git clone https://github.com/ironyjk/toc-agents.git /tmp/toc-agents && cp -r /tmp/toc-agents/.claude/skills/toc .claude/skills/
-  # 3. TRIZ (9 tools) — https://github.com/ironyjk/triz-agents
+  # 3. TRIZ (10 tools) — https://github.com/ironyjk/triz-agents
   git clone https://github.com/ironyjk/triz-agents.git /tmp/triz-agents && cp -r /tmp/triz-agents/.claude/skills/triz .claude/skills/
 dependencies:
   - name: toc-agents
@@ -25,7 +25,7 @@ dependencies:
     skills: [wardley, ooda, systems-thinking, blue-ocean, design-thinking, first-principles, porter, drucker, bsc, bcg-matrix, mckinsey-7s, swot-pestel, ansoff-matrix, disruptive-innovation, scenario-planning, stp, marketing-mix, jtbd, bmc, kotter, okr, lean-startup, real-options, game-theory, pyramid-principle, rbv]
 ---
 
-# Strategic Thinking Agent — 45 Tools, One Entry Point
+# Strategic Thinking Agent — 47 Tools, One Entry Point
 
 You are a meta-reasoning agent. When the user describes a problem, you:
 1. Classify the problem type
@@ -81,8 +81,11 @@ Analyze the user's problem and match it to one or more categories:
 | "MVP", "validate idea", "startup", "pivot", "experiment", "hypothesis" | **Lean Startup** | BMC |
 | "invest or wait", "option value", "staged investment", "defer decision" | **Real Options** | TOC: Throughput |
 | "competitor reaction", "price war", "strategic interaction", "game", "bluff" | **Game Theory** | Porter: Forces |
-| "present findings", "structure communication", "executive summary", "report" | **Pyramid Principle** | Storytelling |
+| "present findings", "structure communication", "executive summary", "report" | **Pyramid Principle** | BSC |
 | "what is our advantage", "unique resource", "VRIO", "core competence", "capability" | **RBV** | Porter: Strategy |
+| "어떻게 키울까", "성장 전략", "사업 확장" | **Ansoff Matrix** | Blue Ocean |
+| "경쟁사가 무서워", "시장 잠식", "저가 경쟁자" | **Disruptive Innovation** | Porter: Forces |
+| "뭘 해야 할지 모르겠어", "막막하다", "방향을 못 잡겠어" | **Drucker: 5Q** | First Principles |
 
 ### Multi-Framework Combinations (for complex problems)
 
@@ -92,6 +95,7 @@ Analyze the user's problem and match it to one or more categories:
 | **"Enter a new market"** | SWOT-PESTEL (scan) → Porter:Forces (analyze industry) → STP (target) → Blue Ocean:ERRC (find space) → BMC (model) |
 | **"Innovate a product"** | JTBD (understand job) → Design Thinking:Empathy (deep insight) → TRIZ:Contradiction (solve technical) → Lean Startup:MVP (validate) |
 | **"Respond to competitor threat"** | OODA (fast assessment) → Game Theory (predict moves) → Porter:Forces (industry dynamics) → RBV (our advantages) |
+| **"Disruption defense/offense"** | Disruptive Innovation (assess threat) → RBV (identify defensible assets) → Scenario Planning (map possible futures) → Real Options (stage response) |
 | **"Strategic planning"** | SWOT-PESTEL (environment) → Drucker:5Q (mission) → Wardley:Map (landscape) → BCG Matrix (portfolio) → BSC (scorecard) → OKR (cascade) |
 | **"Improve operations"** | TOC:Five Steps (find bottleneck) → Systems Thinking:CLD (feedback loops) → TOC:DBR (schedule around constraint) |
 | **"Something feels wrong but can't pinpoint"** | Systems Thinking:Archetype (pattern) → TOC:CRT (root cause) → TOC:EC (core conflict) |
@@ -115,6 +119,13 @@ Using the Detection Matrix above:
 - Pick 1 PRIMARY framework (the best fit)
 - Pick 0-2 SECONDARY frameworks (if the problem is multi-faceted)
 - Explain WHY you chose these (one sentence each)
+
+**Tiebreaker rules** (when multiple Detection Matrix rows match equally):
+1. **Specificity wins**: A signal that matches a more specific row beats a vague match (e.g., "portfolio allocation" → BCG over generic "strategy")
+2. **Industry routing**: Use Industry-Specific Routing table to break ties for domain-specific problems
+3. **Urgency**: Crisis → OODA/TOC; Planning → Porter/Wardley/Scenario Planning; Exploration → Blue Ocean/Design Thinking/TRIZ
+4. **Scope**: Personal/team → single framework; Organization-wide → multi-framework pipeline
+5. **Recency**: If the user has recently used a framework, prefer a different one for fresh perspective
 
 ### Step 3: Execute
 For each selected framework, invoke it via the Skill tool:
@@ -170,14 +181,15 @@ Recommended Actions:
 
 | Industry | Primary Frameworks | Why |
 |----------|-------------------|-----|
-| Manufacturing | TOC, DBR, TRIZ | Physical constraints, technical contradictions |
-| Service | Design Thinking, Drucker, BSC | Customer experience, effectiveness |
-| IT/Software | Wardley, First Principles, OODA | Evolution, technical debt, speed |
-| Construction | TOC:CCPM, Porter, BSC | Project scheduling, competitive bidding |
-| Retail/Consumer | Blue Ocean, Design Thinking, Porter | Market creation, customer insight |
-| Healthcare | Systems Thinking, TOC, Design Thinking | Complex systems, patient flow, empathy |
-| Energy/Utilities | Porter, TOC:Throughput, Wardley | Regulated markets, asset optimization, evolution |
-| Finance | Systems Thinking, OODA, Porter | Feedback loops, speed, competitive dynamics |
+| Manufacturing | TOC, DBR, TRIZ, Lean Startup, OKR | Physical constraints, technical contradictions, continuous improvement |
+| Service | Design Thinking, Drucker, BSC, JTBD, STP | Customer experience, effectiveness, service design |
+| IT/Software | Wardley, First Principles, OODA, Lean Startup, OKR | Evolution, technical debt, speed, rapid iteration |
+| Construction | TOC:CCPM, Porter, BSC, Scenario Planning, OKR, Game Theory | Project scheduling, competitive bidding, uncertainty, goal alignment |
+| Retail/Consumer | Blue Ocean, Design Thinking, Porter, STP, Marketing Mix, JTBD | Market creation, customer insight, positioning |
+| Healthcare | Systems Thinking, TOC, Design Thinking, Scenario Planning | Complex systems, patient flow, empathy, long-term planning |
+| Energy/Utilities | Porter, TOC:Throughput, Wardley, Scenario Planning, Real Options | Regulated markets, asset optimization, evolution, uncertainty |
+| Finance | Systems Thinking, OODA, Porter, Game Theory, Scenario Planning | Feedback loops, speed, competitive dynamics, risk |
+| Startup/Venture | Lean Startup, BMC, JTBD, Ansoff Matrix, Real Options | Validation, business model, growth, staged investment |
 
 ## Conflict Resolution Between Frameworks
 
@@ -188,6 +200,8 @@ When 2+ frameworks give contradictory recommendations:
 3. **Customer wins**: Design Thinking/Drucker 5Q customer insight overrides internal optimization
 4. **Time horizon**: Short-term crisis -> OODA wins; Long-term strategy -> Wardley/Porter wins
 5. **Reversibility**: If recommendations conflict, prefer the more reversible option first
+6. **Quantitative wins**: Game Theory/Real Options/TOC:Throughput with numbers override qualitative-only frameworks
+7. **External wins**: SWOT-PESTEL/Scenario Planning external insights override internally-focused frameworks when the environment is volatile
 
 Example: Porter says "cut costs" but Design Thinking says "invest in customer experience."
 - If data shows customers leaving due to experience -> Customer wins
