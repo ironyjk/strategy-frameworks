@@ -1,0 +1,42 @@
+{
+  "name": "strategy-frameworks",
+  "description": "Strategic Thinking Agent — meta-router for 47 business strategy frameworks (Porter Five Forces/Value Chain/Generic Strategies, Drucker MBO/5Q, BSC, Blue Ocean, Wardley Mapping, BCG Matrix, BMC, Lean Startup, OKR, Disruptive Innovation, Scenario Planning, Real Options, Game Theory, and more). Invoke /think to auto-select optimal frameworks.",
+  "version": "0.2.0",
+  "author": {
+    "name": "Choi Hee Chul",
+    "email": "ironyjk@gmail.com"
+  },
+  "homepage": "https://github.com/ironyjk/strategy-frameworks",
+  "repository": "https://github.com/ironyjk/strategy-frameworks",
+  "license": "MIT",
+  "keywords": ["strategy", "business", "decision-making", "porter", "drucker", "wardley", "korean"],
+  "skills": [
+    "./ansoff-matrix",
+    "./bcg-matrix",
+    "./blue-ocean",
+    "./bmc",
+    "./bsc",
+    "./design-thinking",
+    "./disruptive-innovation",
+    "./drucker",
+    "./first-principles",
+    "./game-theory",
+    "./jtbd",
+    "./kotter",
+    "./lean-startup",
+    "./marketing-mix",
+    "./mckinsey-7s",
+    "./okr",
+    "./ooda",
+    "./porter",
+    "./pyramid-principle",
+    "./rbv",
+    "./real-options",
+    "./scenario-planning",
+    "./stp",
+    "./swot-pestel",
+    "./systems-thinking",
+    "./think",
+    "./wardley"
+  ]
+}
