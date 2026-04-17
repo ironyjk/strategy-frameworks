@@ -146,6 +146,8 @@ The 26 strategy frameworks have `user-invocable: false` — they don't appear in
 
 ## Installation
 
+> 💡 **짧은 이름**: [래퍼 설정](https://github.com/ironyjk/claude-frameworks-marketplace#짧은-이름으로-쓰기-optional) 후 `/think`로 호출 가능
+
 ### One-Line Install (all 46 tools)
 
 ```bash
