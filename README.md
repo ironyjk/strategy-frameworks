@@ -246,6 +246,22 @@ These frameworks work with any LLM. The SKILL.md and references/ files are stand
 - **[TRIZ Agents](https://github.com/ironyjk/triz-agents)** — Altshuller's TRIZ, 9 tools
 - **[HowToTalk](https://github.com/ironyjk/howtotalk)** — 13 communication frameworks with auto-routing
 
+## Attribution & Trademarks
+
+This project implements well-known business strategy frameworks for educational purposes. The following are acknowledged:
+
+- **Blue Ocean Strategy®** is a registered trademark of W. Chan Kim & Renée Mauborgne. The Strategy Canvas, ERRC Grid, and Four Actions Framework are proprietary tools described in *Blue Ocean Strategy* (Harvard Business Review Press, 2005).
+- **Pyramid Principle®** (Minto Pyramid Principle) is a registered trademark of Barbara Minto.
+- **Wardley Mapping** was created by Simon Wardley and is available under Creative Commons Attribution 4.0 International license.
+- **Business Model Canvas** was created by Alexander Osterwalder and Yves Pigneur, published under Creative Commons Attribution-Share Alike license (strategyzer.com).
+- **McKinsey 7S Framework** was developed by Tom Peters, Robert Waterman, and Julien Phillips at McKinsey & Company.
+- **BCG Growth-Share Matrix** was developed by Boston Consulting Group (1970).
+- **Balanced Scorecard** was developed by Robert S. Kaplan and David P. Norton.
+
+All other framework names reference published academic works and are used descriptively.
+
+This project is not affiliated with, endorsed by, or sponsored by any of the above trademark holders.
+
 ## License
 
 MIT
